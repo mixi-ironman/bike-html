@@ -1,0 +1,104 @@
+/* box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3); */
+/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); */
+/* setTimeout(() => {debugger}, 3000) */
+
+/* box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.02); */
+
+/* Reset css */
+:root {
+    --color-primary: rgb(108, 176, 149);
+    --color-secondary: rgb(254, 229, 215);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+}
+
+/* body {
+    background-color: rgb(243, 244, 246);
+} */
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.translate--y {
+    transition: all 0.3s;
+}
+
+.translate--y:hover {
+    /* background-color: rgb(226, 203, 166); */
+    transform: translateY(-3px);
+}
+
+.hover--border {
+    transition: all 0.3s;
+}
+
+.hover--border:hover {
+    border: 1px solid red;
+}
+
+.hover--box-shadow {
+    transition: all 0.3s;
+}
+
+.hover--box-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Thanh cuộn tổng quát */
+::-webkit-scrollbar {
+    width: 7px; /* Chiều rộng thanh cuộn */
+    height: 7px; /* Chiều cao thanh cuộn ngang */
+}
+
+/* Phần nền của thanh cuộn */
+/* Màu nền thanh cuộn */
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+}
+
+/* Thanh cuộn */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Màu của thanh cuộn */
+    border-radius: 10px; /* Bo góc thanh cuộn */
+    border: 2px solid #f1f1f1; /* Viền của thanh cuộn */
+}
+
+/* Khi người dùng rê chuột vào thanh cuộn */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu thanh cuộn khi hover */
+}

@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="https://i.pinimg.com/originals/b2/57/81/b2578191becd55a7ebbc3aa9cfda9a7a.jpg"
+            type="image/x-icon"
+        />
+        <title>Product Page</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+
+        <!-- Own carousel  -->
+        <link rel="stylesheet" href="./assets/libs/owlcarousel/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="./assets/libs/owlcarousel/assets/owl.theme.default.min.css" />
+        <!-- Font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- slick(Swiper,own) CSS -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <!-- External link css -->
+        <link rel="stylesheet" href="./assets/css/global.css" />
+        <link rel="stylesheet" href="./assets/css/home.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header container-fluid">
+            <div class="container header-wrap row">
+                <div id="header__logo" class="header__logo">
+                    <a href="/" class="header__logo-wrapper">
+                        <img
+                            class="header__logo-img"
+                            src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/logo.png?1726653723228"
+                            alt="logo EGA Bike"
+                            width="197"
+                            height="55"
+                        />
+                    </a>
+                </div>
+                <div class="header-center">
+                    <nav class="header-center_wrapper">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="/xe-dap" class="menu-item__link" title="Xe đạp">
+                                    <span> Xe đạp</span>
+
+                                    <i
+                                        class="fa-solid fa-angle-down"
+                                        style="font-size: 18px; margin-left: 7px; transform: translateY(1px)"
+                                    ></i>
+                                </a>
+
+                                <div class="menu-item__submenu d-none">
+                                    <ul class="submenu__list container">
+                                        <li class="submenu__item submenu__item--main">
+                                            <a class="link" href="/collections/all" title="Xe đạp leo núi"
+                                                >Xe đạp leo núi</a
+                                            >
+                                        </li>
+
+                                        <li class="submenu__item submenu__item--main">
+                                            <a class="link" href="/xe-dap" title="Xe đạp đường trường"
+                                                >Xe đạp đường trường</a
+                                            >
+                                        </li>
+
+                                        <li class="submenu__item submenu__item--main">
+                                            <a class="link" href="/xe-dap" title="Xe đạp điện">Xe đạp điện</a>
+                                        </li>
+
+                                        <li class="submenu__item submenu__item--main">
+                                            <a class="link" href="/xe-dap" title="Xe đạp thành phố">Xe đạp thành phố</a>
+                                        </li>
+
+                                        <li class="submenu__item submenu__item--main">
+                                            <a class="link" href="/xe-dap" title="Xe đạp trẻ em">Xe đạp trẻ em</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="/phu-tung" class="menu-item__link" title="Phụ tùng xe đạp">
+                                    <span> Phụ tùng xe đạp</span>
+
+                                    <i
+                                        class="fa-solid fa-angle-down"
+                                        style="font-size: 18px; margin-left: 7px; transform: translateY(1px)"
+                                    ></i>
+                                </a>
+
+                                <div class="menu-item__submenu d-none">
+                                    <ul class="submenu__list container">
+                                        <li class="submenu__col">
+                                            <span class="submenu__item submenu__item--main">
+                                                <a class="link" href="/phu-tung" title="Khung sườn xe đạp"
+                                                    >Khung sườn xe đạp</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Khung sườn xe đạp Gravel"
+                                                    >Khung sườn xe đạp Gravel</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a
+                                                    class="link"
+                                                    href="/collections/all"
+                                                    title="Khung sườn xe đạp Touring"
+                                                    >Khung sườn xe đạp Touring</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a
+                                                    class="link"
+                                                    href="/collections/all"
+                                                    title="Khung sườn xe đạp 20 inch"
+                                                    >Khung sườn xe đạp 20 inch</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Khung sườn xe đạp MTB"
+                                                    >Khung sườn xe đạp MTB</a
+                                                >
+                                            </span>
+                                        </li>
+
+                                        <li class="submenu__col">
+                                            <span class="submenu__item submenu__item--main">
+                                                <a class="link" href="/phu-tung" title="Vỏ xe đạp">Vỏ xe đạp</a>
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Vỏ, lốp xe đạp Gravel"
+                                                    >Vỏ, lốp xe đạp Gravel</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Vỏ, lốp xe đạp MTB"
+                                                    >Vỏ, lốp xe đạp MTB</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Vỏ, lốp xe đạp Touring"
+                                                    >Vỏ, lốp xe đạp Touring</a
+                                                >
+                                            </span>
+                                        </li>
+
+                                        <li class="submenu__col">
+                                            <span class="submenu__item submenu__item--main">
+                                                <a class="link" href="/phu-tung" title="Pedal xe đạp">Pedal xe đạp</a>
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Pedal can xe đạp MTB"
+                                                    >Pedal can xe đạp MTB</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Pedal can xe đạp Gravel"
+                                                    >Pedal can xe đạp Gravel</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Pedal can xe đạp Touring"
+                                                    >Pedal can xe đạp Touring</a
+                                                >
+                                            </span>
+                                        </li>
+
+                                        <li class="submenu__col">
+                                            <span class="submenu__item submenu__item--main">
+                                                <a class="link" href="/phu-tung" title="Đùm, Niềng, Căm"
+                                                    >Đùm, Niềng, Căm</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Đùm xe đạp"
+                                                    >Đùm xe đạp</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Niềng xe đạp"
+                                                    >Niềng xe đạp</a
+                                                >
+                                            </span>
+
+                                            <span class="submenu__item submenu__item">
+                                                <a class="link" href="/collections/all" title="Căm xe đạp"
+                                                    >Căm xe đạp</a
+                                                >
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="/flash-sale" class="menu-item__link" title="Flash Sale">
+                                    <span> Flash Sale</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="/dich-vu-cho-thue-xe" class="menu-item__link" title="Thuê xe đạp">
+                                    <span> Thuê xe đạp</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a
+                                    href="https://wiki.egany.com/s/ega-bike-sapo"
+                                    target="_blank"
+                                    class="menu-item__link"
+                                    title="Hướng dẫn thiết lập"
+                                >
+                                    <span> Hướng dẫn thiết lập</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="navigation-arrows d-none">
+                        <i class="fas fa-chevron-left prev disabled"></i>
+                        <i class="fas fa-chevron-right next disabled"></i>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-right__lang">
+                        <a href=""
+                            ><img
+                                class="header-right__lang-flag"
+                                src="data:image/gif;base64,R0lGODlhEAALANUAAPU8POwAAPQAAP96euUAAPdLS/QsHPk8Pf5dXf52dvZERPvMRPx3SvITE/1STvIuLvhSUvj4NflUVf5xcv1ubvQgIPUlJfENDfdDLfpAQPthYftFRfoAAPYqKv5ZWfn5PPr6QfxqavxmZvpdXfMZGfxLS/tKSfc3NvMzM/1UVOAAAPQfH/cxMfxPT/k6OvlzOvYzK/f3MPrAP/f3L/dgL/Z3KvlYWPYsLPzVS/fSMPg+NPX1JPZOKt0AAP0AAP8AACH5BAAAAAAALAAAAAAQAAsAAAaPwJ/w5yv6OByBUhAI/AbQRGJCCYk0Ixuk4BwgEJ6Ug8HIHE6sG/cJFpdkizOrY1EQfImwA7cAfWQ5MBYVAHcTKS0lDh8fETEYFiskhT4ULSYbGS8RMzWRJA0nBBwhmBkuETQ8O5INDSgqHCKZLjoYdAYGDRcXDyoCWDYSWwoKACcoKA8PPUtNzwTRKio91UEAOw=="
+                                alt="ap multilangauge" />
+                            <img
+                                alt="ap multilangauge"
+                                class="ae-icon-right ae-caret"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG1JREFUOI3tzj0Kg2AQhOFHqxAQyRkEIY0XsAl4gxAIHjoXsPIcFmpjLD7wJ5LSt5vdmdnl5O/ccdnwFIi+Ig6WDZ64LoRLdBjWLsSokQTzB/KN72YivJFOukK2ZFwreaHHB+3e62HJ7Ujw5AdGZAQIe/VHND0AAAAASUVORK5CYII="
+                        /></a>
+                        <div class="header-lang__dropdown d-none">
+                            <ul class="header-lang__list">
+                                <li data-lang="vi" title="Tiếng Việt" class="header-lang__item">
+                                    <a href="https://ega-bike.mysapo.net/?aelang=vi" class="header-lang__item-link"
+                                        ><img class="header-lang__item-icon" src="" alt="" /><span>Tiếng Việt</span></a
+                                    >
+                                </li>
+                                <li data-lang="us" title="Tiếng Anh" class="ae-item-lang">
+                                    <a href="https://ega-bike.mysapo.net/?aelang=vi" class="header-lang__item-link"
+                                        ><img class="header-lang__item-icon" src="" alt="" /><span>Tiếng Anh</span></a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header-right__live">
+                        <button type="button" class="bg-white">
+                            <i
+                                class="fa-solid fa-circle"
+                                style="font-size: 8px; transform: translateY(-2px); color: red; margin-right: px"
+                            ></i>
+                            Live
+                        </button>
+                    </div>
+                    <div class="header-right__icons">
+                        <div class="header-icon icon-action__search icon-action__search--desktop">
+                            <img
+                                src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-search.png?1726653723228"
+                                alt="icon-search"
+                            />
+                        </div>
+                        <div class="header-right__acount">
+                            <img
+                                src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-account.png?1726653723228"
+                                alt="icon-account"
+                            />
+                            <div class="account-action d-none">
+                                <a href="/account/login" title="Đăng nhập">Đăng nhập</a>
+                                <a href="/account/register" title="Đăng ký">Đăng ký</a>
+                            </div>
+                        </div>
+                        <div class="header-right__cart">
+                            <a class="header-right__cart-link" href="/cart" title="Giỏ hàng">
+                                <img
+                                    class="header-right__cart-icon"
+                                    src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-cart.png?1726653723228"
+                                    alt="icon-cart"
+                                />
+
+                                <span class="header-right_count-cart count_item_pr">3</span>
+                            </a>
+                            <div class="top-cart-content card d-none">
+                                <ul id="cart-sidebar" class="mini-products-list count_li list-unstyled">
+                                    <ul class="list-item-cart">
+                                        <li class="item productid-122469533"></li>
+                                    </ul>
+                                    <div class="pd">
+                                        <div class="top-subtotal">
+                                            Tổng tiền tạm tính: <span class="price price_big">69.680.000₫</span>
+                                        </div>
+                                    </div>
+                                    <div class="pd right_ct">
+                                        <a href="/cart" class="btn btn-white"><span>Tiến hành thanh toán</span></a>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Slider -->
+        <div class="slider-wrap container-fluid">
+            <!-- Slider items -->
+            <div class="slider-list row">
+                <div class="slider-item col-md-12">
+                    <img
+                        src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/slider_1.jpg?1726653723228"
+                        alt="Hệ thống túi ghi đông XTOURING"
+                        class="d-block w-100"
+                    />
+                </div>
+                <div class="slider-item col-md-12">
+                    <img
+                        src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/slider_2.jpg?1726653723228"
+                        alt="Hệ thống túi ghi đông XTOURING"
+                        class="d-block w-100"
+                    />
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <main class="main-content container">
+            <!-- Danh mục sản phẩm -->
+            <div class="product-catalog">
+                <h4 class="product-catalog__heading">DANH MỤC SẢN PHẨM</h4>
+                <div class="product-catalog__list row g-2">
+                    <div class="col-md-2">
+                        <div class="product-catalog__item">
+                            <a href="#" class="product-catalog__item-link">
+                                <div class="product-catalog__wrap-img">
+                                    <img
+                                        class="product-catalog__item-img"
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/521/820/themes/957130/assets/season_coll_1_img.png?1726653723228"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-catalog__item-info">
+                                    <div class="product-catalog__info-name">Mountain bike</div>
+                                    <div class="product-catalog__info-number">19</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="product-catalog__item">
+                            <a href="#" class="product-catalog__item-link">
+                                <div class="product-catalog__wrap-img">
+                                    <img
+                                        class="product-catalog__item-img"
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/521/820/themes/957130/assets/season_coll_1_img.png?1726653723228"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-catalog__item-info">
+                                    <div class="product-catalog__info-name">Mountain bike</div>
+                                    <div class="product-catalog__info-number">19</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="product-catalog__item">
+                            <a href="#" class="product-catalog__item-link">
+                                <div class="product-catalog__wrap-img">
+                                    <img
+                                        class="product-catalog__item-img"
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/521/820/themes/957130/assets/season_coll_1_img.png?1726653723228"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-catalog__item-info">
+                                    <div class="product-catalog__info-name">Mountain bike</div>
+                                    <div class="product-catalog__info-number">19</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="product-catalog__item">
+                            <a href="#" class="product-catalog__item-link">
+                                <div class="product-catalog__wrap-img">
+                                    <img
+                                        class="product-catalog__item-img"
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/521/820/themes/957130/assets/season_coll_1_img.png?1726653723228"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-catalog__item-info">
+                                    <div class="product-catalog__info-name">Mountain bike</div>
+                                    <div class="product-catalog__info-number">19</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="product-catalog__item">
+                            <a href="#" class="product-catalog__item-link">
+                                <div class="product-catalog__wrap-img">
+                                    <img
+                                        class="product-catalog__item-img"
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/521/820/themes/957130/assets/season_coll_1_img.png?1726653723228"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-catalog__item-info">
+                                    <div class="product-catalog__info-name">Mountain bike</div>
+                                    <div class="product-catalog__info-number">19</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="product-catalog__item">
+                            <a href="#" class="product-catalog__item-link">
+                                <div class="product-catalog__wrap-img">
+                                    <img
+                                        class="product-catalog__item-img"
+                                        src="https://bizweb.dktcdn.net/thumb/large/100/521/820/themes/957130/assets/season_coll_1_img.png?1726653723228"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="product-catalog__item-info">
+                                    <div class="product-catalog__info-name">Mountain bike</div>
+                                    <div class="product-catalog__info-number">19</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coupon list -->
+            <div class="coupon-list row g-2">
+                <div class="col-md-3">
+                    <div class="coupon-item">
+                        <div class="coupon-item__wrap-img">
+                            <img
+                                src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
+                                alt=""
+                            />
+                        </div>
+                        <div class="coupon-item__info">
+                            <div class="coupon-item__info-name">Phụ kiện 20%</div>
+                            <div class="coupon-item__info-description">Giảm 5% cho tất cả xe đạp trẻ em</div>
+                            <div class="coupon-item__info-code">Mã: <span>Summer5</span></div>
+                            <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="coupon-item">
+                        <div class="coupon-item__wrap-img">
+                            <img
+                                src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
+                                alt=""
+                            />
+                        </div>
+                        <div class="coupon-item__info">
+                            <div class="coupon-item__info-name">Phụ kiện 20%</div>
+                            <div class="coupon-item__info-description">Giảm 5% cho tất cả xe đạp trẻ em</div>
+                            <div class="coupon-item__info-code">Mã: <span>Summer5</span></div>
+                            <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="coupon-item">
+                        <div class="coupon-item__wrap-img">
+                            <img
+                                src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
+                                alt=""
+                            />
+                        </div>
+                        <div class="coupon-item__info">
+                            <div class="coupon-item__info-name">Phụ kiện 20%</div>
+                            <div class="coupon-item__info-description">Giảm 5% cho tất cả xe đạp trẻ em</div>
+                            <div class="coupon-item__info-code">Mã: <span>Summer5</span></div>
+                            <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="coupon-item">
+                        <div class="coupon-item__wrap-img">
+                            <img
+                                src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
+                                alt=""
+                            />
+                        </div>
+                        <div class="coupon-item__info">
+                            <div class="coupon-item__info-name">Phụ kiện 20%</div>
+                            <div class="coupon-item__info-description">Giảm 5% cho tất cả xe đạp trẻ em</div>
+                            <div class="coupon-item__info-code">Mã: <span>Summer5</span></div>
+                            <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection product flashsale -->
+            <div class="product-flashsale row">
+                <div class="product-flashsale__heading col-md-12">
+                    <h3>HAPPY SUMMER - GIẢM ĐẾN 50%</h3>
+                    <p>kết thúc sau...</p>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="product-list row g-2">
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-3-d30ef3382f6444c7a7d333bb0a0152fc-large.jpg?v=1721810923400"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-1-b7ae5beb3d7b4ed78af35456402e4081.jpg?v=1721783240913"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-3-4a49ba5f8a06422d9bbd84ec7d4f3a8c-large.jpg?v=1721810485640"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg?v=1721783248057"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-4-d1a1d91bb19b454db88accd5baaedd88-large.jpg?v=1721810883717"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <a href="#" v class="btn-load_more"
+                                >Xem tất cả
+                                <span style="transform: translateY(2px); display: inline-block"
+                                    ><ion-icon name="chevron-forward-outline"></ion-icon></span
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bộ sưu tập ảnh -->
+            <div class="collection-gallery row g-3">
+                <div class="col-md-6">
+                    <div class="collection-gallery__item">
+                        <img
+                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_1_img.jpg?1726653723228"
+                            alt=""
+                            class="collection-item__img-left"
+                        />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="collection-gallery__item">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_2_img.jpg?1726653723228"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="collection-gallery__item">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_3_img.jpg?1726653723228"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="collection-gallery__item">
+                                <img
+                                    src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_4_img.jpg?1726653723228"
+                                    alt=""
+                                    style="height: 250px; width: 100% !important"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- //Product -->
+            <div class="product-flashsale row" style="margin-top: 100px">
+                <div class="product-flashsale__heading col-md-12">
+                    <div>
+                        <h3 style="width: 278px">Ưu đãi Phụ kiện xe đạp</h3>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" v class="btn-load_more"
+                            >Xem tất cả
+                            <span style="transform: translateY(2px); display: inline-block"
+                                ><ion-icon name="chevron-forward-outline"></ion-icon></span
+                        ></a>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="product-list row g-2">
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/wohoxtouringdrybag6-1296x-0f6eb4af893443d4b233f19bb40c6c1e.jpg?v=1721783261390"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/img-3561-1296x-fef3b91638234f2088f2be987bea88f6-large.jpg?v=1721810970720"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/woho-xtouring-full-frame-bag-dry-l-2-1296x-1e7bc92499ee48d28f7bf97bfcccc5c1.jpg?v=1721783259763"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/fmb-014-cfd66e18-8194-46e1-b716-4aed6db0e642-1296x-6da0ae1b0fde40a38051899f098b553c-large.jpg?v=1721811025710"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/xtouringhandlebarharness7-1296x-2e3074d3e3ce4641910e26ab1d4619d6.jpg?v=1721783257817"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/xtouring-handlebar-harness-3-1296x-c20842ae29964a928146e582ad9c3563-large.jpg?v=1721811066087"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/img-8721-1296x-99656b9e6f0a4a6cbe92e14414090835.jpg?v=1721783256610"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/img-0247-1296x-043b6a9d57f34cbaa6c7cb73cb674c19-large.jpg?v=1721811134463"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/f1iheuebpnct8dbvssji-ec060b84060d4ce2b106e61fe0e9c8bb.jpg?v=1721783244500"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/wxfofmfhzkzotcxqd4bz-96f928565d9d45d7bea5414adf43025d-large.jpg?v=1721811433340"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/i16enkcdvhwrvr2knxqn-a7ac3ee76e3e45dca0cfbe0096776420.jpg?v=1721783243213"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/f4nmolhe02szlbnm7mt1-58795f7eb8ca44f8a730579f626db4bc-large.jpg?v=1721811507593"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="product-item translate--y">
+                                <a href="product-item__img-link" class="d-block">
+                                    <div class="product-item__wrap-img">
+                                        <img
+                                            class="product-item__img"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/uctlxv25nympfnq4nccv-7e0d68be3ec44cbbaa235c33663febcc.jpg?v=1721783242493"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="product-item__img-thumnail"
+                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/frame-24-68b987dcf5f948b686151426b1f9e8d6-large.jpg?v=1721811568100"
+                                            alt=""
+                                        />
+                                    </div>
+                                </a>
+                                <div class="product-item__info">
+                                    <p class="product-info__vendor">Khác</p>
+                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                    <p class="product-info__rate">
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                    </p>
+                                    <div class="product-info__price-box">
+                                        <p class="product-info__contact d-none">Liên hệ</p>
+                                        <p class="product-info__price">32.590.000đ</p>
+                                        <div class="d-flex">
+                                            <p class="product-info__product-origin">44.434.223đ</p>
+                                            <span
+                                                style="
+                                                    margin-left: 10px;
+                                                    font-size: 12px;
+                                                    background-color: rgb(235, 48, 48);
+                                                    color: white;
+                                                    padding: 1px 8px;
+                                                    border-radius: 10px;
+                                                    display: inline-block;
+                                                "
+                                                >-28%</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="product-info__item-color--chosen">
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                        <img
+                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                            alt=""
+                                            class="product-info__item-color-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="product-item__sold-info">
+                                    <p class="product-item__sold-title">Vừa mở bán</p>
+                                    <div class="product-item__sold-bar">
+                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- look book--one product -->
+            <div class="look-book_container row">
+                <div class="col-md-7">
+                    <div class="look-book__item-wrap_img">
+                        <img
+                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/lookbook_oneproduct_img.jpg?1726653723228"
+                            alt=""
+                            class="look-book__img"
+                        />
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="look-book__item-info">
+                        <h3 class="look-book__item-heading">
+                            SCOTT SUB CROSS 2.0 - Lựa chọn hoàn hảo cho hành trình phượt và di chuyển trong thành phố!
+                        </h3>
+                        <p class="look-book__item-description">
+                            Chiếc xe đạp hybrid hoàn hảo cho những ai yêu thích khám phá và di chuyển linh hoạt. Với
+                            thiết kế hiện đại, cùng các tính năng vượt trội, SUB CROSS 2.0 mang đến trải nghiệm lái xe
+                            tuyệt vời trên mọi địa hình.
+                        </p>
+                        <div class="look-book__item-advantages">
+                            <h5 class="look-book__advantages-title">Ưu điểm nổ bật</h5>
+                            <ul class="look-book-list_advantages">
+                                <li class="look-book-item_content">Khung xe hợp kim nhôm siêu nhẹ và bền bỉ</li>
+                                <li class="look-book-item_content">Phuộc trước Suntour NEX HLO 63mm êm ái</li>
+                                <li class="look-book-item_content">
+                                    Hệ thống truyền động Shimano Deore T6000 30 tốc độ linh hoạt
+                                </li>
+                                <li class="look-book-item_content">Phanh thủy lực an toàn, chính xác</li>
+                                <li class="look-book-item_content">Lốp xe Kenda Booster bám đường tốt.</li>
+                                <li class="look-book-item_content">Ghi đông cong, yên Selle Italia thoải mái.</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="#" v class="btn-load_more">Xem chi tiết </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider product 2 -->
+            <div class="slider_product-2 row">
+                <!-- banner -->
+                <div class="slider-banner col-md-12">
+                    <div class="slider-banner_wrap">
+                        <img
+                            class="slider-banner_img"
+                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/slide_product_2_img_1_img.jpg?1726653723228s"
+                            alt=""
+                        />
+                    </div>
+                </div>
+
+                <!-- //Product -->
+                <div class="product-flashsale row" style="margin-top: 20px">
+                    <div class="product-flashsale__heading col-md-12">
+                        <div>
+                            <h3 style="width: 278px">Ưu đãi <span class="d-block fs-4">Phụ tùng xe đạp</span></h3>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" v class="btn-load_more" style="width: 150px; height: 48px">Xem tất cả </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="product-list row g-2">
+                            <div class="col-md-3">
+                                <div class="product-item translate--y">
+                                    <a href="product-item__img-link" class="d-block">
+                                        <div class="product-item__wrap-img">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/ycles-potang-xe-dap-sieu-ngan2-7b8f2f7cc6604b6795845564b9ba5ae8-master-1afd763416c749d4b49aea4c0af76cf8.png?v=1721783255047"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail"
+                                                src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/ycles-potang-xe-dap-sieu-ngan1-a9aa98f102be46c183a2c703b7368941-master-3aeed9077b8e4cdc9dddc49a8c4cecc4-large.png?v=1721811191610"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                    <div class="product-item__info">
+                                        <p class="product-info__vendor">Khác</p>
+                                        <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                        <p class="product-info__rate">
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__contact d-none">Liên hệ</p>
+                                            <p class="product-info__price">32.590.000đ</p>
+                                            <div class="d-flex">
+                                                <p class="product-info__product-origin">44.434.223đ</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 10px;
+                                                        font-size: 12px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 8px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >-28%</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="product-info__item-color--chosen">
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="product-item__sold-info">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product-item translate--y">
+                                    <a href="product-item__img-link" class="d-block">
+                                        <div class="product-item__wrap-img">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/tb-crankbrothers-stamp1-mau-do-9e628bd3057948508794b02b1ce6df27-master-bc16b057ce2e48b49a323d40782f9f91.png?v=1721783254227"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail"
+                                                src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/kbrothers-stamp1-mau-xanh-blue-c0e557290c5243e7a00163f8429c8cac-master-15df0456e847453cbae17e3ff7d9a039-large.png?v=1721811240480"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                    <div class="product-item__info">
+                                        <p class="product-info__vendor">Khác</p>
+                                        <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                        <p class="product-info__rate">
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__contact d-none">Liên hệ</p>
+                                            <p class="product-info__price">32.590.000đ</p>
+                                            <div class="d-flex">
+                                                <p class="product-info__product-origin">44.434.223đ</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 10px;
+                                                        font-size: 12px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 8px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >-28%</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="product-info__item-color--chosen">
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="product-item__sold-info">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product-item translate--y">
+                                    <a href="product-item__img-link" class="d-block">
+                                        <div class="product-item__wrap-img">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/up-xe-dap-mtb-sram-sx-eagle-12-91ba21e1aed34b3bbff702f22a9cd6df-master-7d99056a9107433f9875ca43959f79a3.jpg?v=1721783252447"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail"
+                                                src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/dap-sram-sx-eagle-12-toc-do-8-28ebbe5779434fec82fbadad55304c37-master-1ee0fd006bd741d6b6e7f5eb4f4f91f1-large.jpg?v=1721811355120"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                    <div class="product-item__info">
+                                        <p class="product-info__vendor">Khác</p>
+                                        <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                        <p class="product-info__rate">
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__contact d-none">Liên hệ</p>
+                                            <p class="product-info__price">32.590.000đ</p>
+                                            <div class="d-flex">
+                                                <p class="product-info__product-origin">44.434.223đ</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 10px;
+                                                        font-size: 12px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 8px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >-28%</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="product-info__item-color--chosen">
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="product-item__sold-info">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product-item translate--y">
+                                    <a href="product-item__img-link" class="d-block">
+                                        <div class="product-item__wrap-img">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/oup-sram-sx-eagle-12sp-2021-36a378739eed4ea5a36e06192222daf3-1024x1024-5ecb8f4c6e354a82959677720647cd41-jpeg.jpg?v=1721783250560"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail"
+                                                src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/oup-sram-sx-eagle-12sp-2021-36a378739eed4ea5a36e06192222daf3-1024x1024-5ecb8f4c6e354a82959677720647cd41-jpeg.jpg?v=1721783250560   "
+                                                alt=""
+                                            />
+                                        </div>
+                                    </a>
+                                    <div class="product-item__info">
+                                        <p class="product-info__vendor">Khác</p>
+                                        <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                        <p class="product-info__rate">
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                            <ion-icon class="product-info__rate-star" name="star-outline"></ion-icon>
+                                        </p>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__contact d-none">Liên hệ</p>
+                                            <p class="product-info__price">32.590.000đ</p>
+                                            <div class="d-flex">
+                                                <p class="product-info__product-origin">44.434.223đ</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 10px;
+                                                        font-size: 12px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 8px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >-28%</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="product-info__item-color--chosen">
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                            <img
+                                                src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                alt=""
+                                                class="product-info__item-color-img"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="product-item__sold-info">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog -->
+            <div class="blog-container row">
+                <div class="blog__heading col-md-12 d-flex">
+                    <div>
+                        <h3 style="width: 278px">Tin tức</h3>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" v class="btn-load_more" style="width: 150px; height: 48px">Xem tất cả </a>
+                    </div>
+                </div>
+                <div class="blog-list row g-2">
+                    <div class="col-md-3">
+                        <div class="blog-item translate--y">
+                            <div class="blog-item__wrap">
+                                <img
+                                    class="blog-item__img"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/521/820/articles/xe-dap-merida-cua-nuoc-nao-4a248cc5cbf145d684556a4794ffb93c-94ac87f9bc084dca96a81737ba4cda9b-large-ae3980f2-9322-4232-a5fe-90156d861fe6.jpg?v=1721789237590s"
+                                    alt="Blog image"
+                                />
+                                <div class="blog-item__content">
+                                    <a class="blog-item__title d-inline-block"
+                                        >Top 5 xe đạp thể thao chính hãng không thể bỏ qua</a
+                                    >
+                                    <p class="date-post" style="margin: 0">30/04/2001</p>
+                                    <p class="blog-item__text">
+                                        Mô tả ngắn gọn về bài viết. Đây là đoạn giới thiệu hoặc phần tóm tắt nội dung
+                                        của bài viết.
+                                    </p>
+                                    <a href="#" class="btn-read_more">Đọc tiếp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="blog-item translate--y">
+                            <div class="blog-item__wrap">
+                                <img
+                                    class="blog-item__img"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/521/820/articles/xe-dap-merida-cua-nuoc-nao-4a248cc5cbf145d684556a4794ffb93c-94ac87f9bc084dca96a81737ba4cda9b-large-ae3980f2-9322-4232-a5fe-90156d861fe6.jpg?v=1721789237590s"
+                                    alt="Blog image"
+                                />
+                                <div class="blog-item__content">
+                                    <a class="blog-item__title d-inline-block"
+                                        >Top 5 xe đạp thể thao chính hãng không thể bỏ qua</a
+                                    >
+                                    <p class="date-post" style="margin: 0">30/04/2001</p>
+                                    <p class="blog-item__text">
+                                        Mô tả ngắn gọn về bài viết. Đây là đoạn giới thiệu hoặc phần tóm tắt nội dung
+                                        của bài viết.
+                                    </p>
+                                    <a href="#" class="btn-read_more">Đọc tiếp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="blog-item translate--y">
+                            <div class="blog-item__wrap">
+                                <img
+                                    class="blog-item__img"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/521/820/articles/xe-dap-merida-cua-nuoc-nao-4a248cc5cbf145d684556a4794ffb93c-94ac87f9bc084dca96a81737ba4cda9b-large-ae3980f2-9322-4232-a5fe-90156d861fe6.jpg?v=1721789237590s"
+                                    alt="Blog image"
+                                />
+                                <div class="blog-item__content">
+                                    <a class="blog-item__title d-inline-block"
+                                        >Top 5 xe đạp thể thao chính hãng không thể bỏ qua</a
+                                    >
+                                    <p class="date-post" style="margin: 0">30/04/2001</p>
+                                    <p class="blog-item__text">
+                                        Mô tả ngắn gọn về bài viết. Đây là đoạn giới thiệu hoặc phần tóm tắt nội dung
+                                        của bài viết.
+                                    </p>
+                                    <a href="#" class="btn-read_more">Đọc tiếp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="blog-item translate--y">
+                            <div class="blog-item__wrap">
+                                <img
+                                    class="blog-item__img"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/521/820/articles/xe-dap-merida-cua-nuoc-nao-4a248cc5cbf145d684556a4794ffb93c-94ac87f9bc084dca96a81737ba4cda9b-large-ae3980f2-9322-4232-a5fe-90156d861fe6.jpg?v=1721789237590s"
+                                    alt="Blog image"
+                                />
+                                <div class="blog-item__content">
+                                    <a class="blog-item__title d-inline-block"
+                                        >Top 5 xe đạp thể thao chính hãng không thể bỏ qua</a
+                                    >
+                                    <p class="date-post" style="margin: 0">30/04/2001</p>
+                                    <p class="blog-item__text">
+                                        Mô tả ngắn gọn về bài viết. Đây là đoạn giới thiệu hoặc phần tóm tắt nội dung
+                                        của bài viết.
+                                    </p>
+                                    <a href="#" class="btn-read_more">Đọc tiếp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="footer"
+            style="height: 50px; margin-top: 30px; background-color: rgb(131, 148, 148); text-align: center"
+        >
+            <p>&copy; 2024 My E-commerce Site. All rights reserved.</p>
+        </footer>
+
+        <!-- Ionicons  -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- Bootstrap JS and dependencies -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Link Jquery -->
+        <script src="./assets/libs/jquery/jquery-3.7.0.min.js"></script>
+        <!-- own carousel  -->
+        <script src="./assets/libs/jquery/jquery-3.7.0.min.js"></script>
+        <script src="./assets/libs/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Slick carousel -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
+        <!-- JavaScript để thay đổi hình ảnh lớn khi click vào product-info__thumbnail -->
+        <script src="./assets/js/home.js"></script>
+    </body>
+</html>
