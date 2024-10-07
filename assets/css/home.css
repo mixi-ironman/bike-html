@@ -77,6 +77,8 @@ header {
 
 .menu-item__submenu {
     display: none;
+    text-align: center;
+    margin-left: 1px;
     position: absolute;
     background-color: white;
     z-index: 1000;
@@ -92,7 +94,6 @@ header {
     display: none;
     position: absolute;
     left: 0;
-    /* top: calc(100% + 10px); */
     background-color: white;
     z-index: 1000;
     border: 1px solid rgb(136, 136, 136, 0.2);
@@ -100,11 +101,12 @@ header {
     width: 100%;
     height: 330px;
     overflow: auto;
+    transform: translateY(10px);
 }
 
-.menu-item:hover .menu-item__submenu-fluid {
+/* .menu-item:hover .menu-item__submenu-fluid {
     display: block;
-}
+} */
 
 .submenu__list {
     width: 250px;
@@ -199,6 +201,9 @@ header {
     width: 400px;
     transform: translateX(2%);
     padding: 10px;
+    background-color: white;
+    border: 1px solid rgb(136, 136, 136, 0.3);
+    border-radius: 2px;
 }
 
 .header-right__cart:hover .top-cart-content {
@@ -242,6 +247,7 @@ header {
 .list-item-cart_product-price span {
     display: inline-block;
     color: black;
+    font-size: 12px;
 }
 
 .top-subtotal {
