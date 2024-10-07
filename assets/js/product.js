@@ -1,17 +1,3 @@
-document.querySelector('.btn-increase').addEventListener('click', function () {
-    let quantityInput = document.querySelector('.input-quantity');
-    let currentValue = parseInt(quantityInput.value);
-    quantityInput.value = currentValue + 1;
-});
-
-document.querySelector('.btn-decrease').addEventListener('click', function () {
-    let quantityInput = document.querySelector('.input-quantity');
-    let currentValue = parseInt(quantityInput.value);
-    if (currentValue > 1) {
-        quantityInput.value = currentValue - 1;
-    }
-});
-
 $(document).ready(function () {
     function showTab(event) {
         var tabItem = $('.product-detail__nav-item');
