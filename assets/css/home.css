@@ -47,6 +47,10 @@ header {
     overflow: hidden;
 }
 
+.menu-item__link span {
+    font-size: 14px;
+}
+
 .menu-item__link::after {
     content: '';
     position: absolute;
@@ -126,14 +130,18 @@ header {
 }
 
 .submenu__item a {
-    font-size: 16px;
+    font-size: 15px;
+    color: #5f5d5d;
     font-weight: 500;
 }
 
 .submenu__item:hover {
     background-color: rgb(136, 136, 136, 0.2);
-    color: #0056b3;
     border-radius: 4px;
+}
+
+.submenu__item:hover.submenu__item a {
+    color: black;
 }
 
 /* header-right */
@@ -437,6 +445,9 @@ header {
 /* Coupon list */
 .coupon-list {
     margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .coupon-item {
     display: flex;
@@ -450,17 +461,27 @@ header {
     position: relative;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     border-radius: 0 15px 15px 0;
-    padding: 10px 10px 10px 15px;
-    height: 100%;
+    padding: 5px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50px;
+    flex: 0 0 50px;
+}
+
+.coupon-item__img {
+    max-width: 80%;
 }
 
 .coupon-item__info {
     border-radius: 15px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 }
 .coupon-item__wrap-img::after {
     position: absolute;
@@ -638,16 +659,15 @@ header {
     margin-top: 10px;
 }
 .product-info__item-color-img {
-    width: 26px;
-    height: 26px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     border: 1px solid #888;
-    border-radius: 4px;
     margin-right: 3px;
 }
 
 .product-info__item-color-img:hover {
-    border: 2px solid black;
+    border: 1px solid rgb(243, 48, 48);
 }
 
 /* //thanh product sold */
