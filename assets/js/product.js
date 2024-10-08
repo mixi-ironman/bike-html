@@ -2,6 +2,7 @@ $(document).ready(function () {
     function showTab(event) {
         var tabItem = $('.product-detail__nav-item');
         var panes = $('.product-detail__tab-content');
+        // console.log(panes);
 
         tabItem.removeClass('active');
         panes.removeClass('active');
