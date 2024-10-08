@@ -21,9 +21,43 @@ $(document).ready(function () {
         if (!$(e.target).closest('.coupon-toggle-btn, .coupon-list-container').length) {
             $('.coupon-list-container').removeClass('show');
             $('.coupon-list-overlay').fadeOut(); // Ẩn overlay
+            // reset lại nút sao chép coupon
+            // $('.copy-btn').text('Sao chép');
+            // $('.copy-btn').css('background-color', 'black');
             setTimeout(function () {
                 $('.coupon-list-container').css('display', 'none'); // Ẩn sau khi hiệu ứng hoàn tất
             }, 300);
         }
     });
 });
+
+$(document).ready(function () {
+    $('#deliveryDate').datepicker({
+        format: 'dd/mm/yyyy',
+        autoclose: true,
+        todayHighlight: true,
+        language: 'vi',
+    });
+});
+
+function copyCouponCode(elementId) {
+    const couponCode = $('.' + elementId).text();
+    if (navigator.clipboard) {
+        navigator.clipboard
+            .writeText(couponCode)
+            .then(() => {
+                const $button = $('.copy-btn');
+                $button.text('Đã sao chép');
+                $button.css('background-color', '#7D726E');
+
+                // Sau 5 giây đổi lại trạng thái nút
+                setTimeout(() => {
+                    $button.text('Sao chép');
+                    $button.css('background-color', 'black');
+                }, 2000);
+            })
+            .catch((err) => {
+                console.error('Không thể sao chép mã: ', err);
+            });
+    }
+}
