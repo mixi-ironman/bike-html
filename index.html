@@ -16,7 +16,6 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
-
         <!-- Own carousel  -->
         <link rel="stylesheet" href="./assets/libs/owlcarousel/assets/owl.carousel.min.css" />
         <link rel="stylesheet" href="./assets/libs/owlcarousel/assets/owl.theme.default.min.css" />
@@ -282,12 +281,12 @@
                         </button>
                     </div>
                     <div class="header-right__icons">
-                        <div class="header-icon icon-action__search icon-action__search--desktop">
+                        <button class="header-icon icon-action__search icon-action__search--desktop bg-white">
                             <img
                                 src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-search.png?1726653723228"
                                 alt="icon-search"
                             />
-                        </div>
+                        </button>
                         <div class="header-right__acount">
                             <img
                                 src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-account.png?1726653723228"
@@ -299,7 +298,7 @@
                             </div>
                         </div>
                         <div class="header-right__cart">
-                            <a class="header-right__cart-link" href="/cart" title="Giỏ hàng">
+                            <a class="header-right__cart-link" href="#" title="Giỏ hàng">
                                 <img
                                     class="header-right__cart-icon"
                                     src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-cart.png?1726653723228"
@@ -395,6 +394,180 @@
                 </div>
             </div>
         </header>
+        <div id="resultBox" class="container-fluid hidden">
+            <div class="container">
+                <div class="row">
+                    <div id="header__logo" class="header__logo col-md-2 align-items-center">
+                        <a href="" class="header__logo-wrapper">
+                            <img
+                                class="header__logo-img"
+                                src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/logo.png?1726653723228"
+                                alt="logo EGA Bike"
+                                width="197"
+                                height="55"
+                            />
+                        </a>
+                    </div>
+                    <div class="header_search-box col-md-7 position-relative d-flex flex-column justify-content-center">
+                        <form class="w-100 d-flex justify-content-center align-items-center">
+                            <!-- Ngăn chặn việc gửi form -->
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Tìm kiếm..."
+                                style="
+                                    width: 80%;
+                                    padding: 10px 15px;
+                                    border: 1px solid rgb(77, 75, 75);
+                                    border-radius: 50px;
+                                "
+                            />
+                            <button
+                                type="button"
+                                class="icon-action__search position-absolute"
+                                style="
+                                    right: 12%;
+                                    width: 80px;
+                                    padding: 7px 10px;
+                                    border-radius: 50px;
+                                    background-color: #292929;
+                                    color: white;
+                                "
+                            >
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+
+                        <div class="search-dropdow mt-2" style="margin-left: 80px">
+                            <ul class="search-list d-flex">
+                                <li class="search-item">
+                                    <a style="font-size: 13px; color: #888; margin-right: 8px" href="">Xe đạp</a>
+                                </li>
+                                <li class="search-item">
+                                    <a style="font-size: 13px; color: #888; margin-right: 8px" href=""
+                                        >Phụ tùng xe đạp</a
+                                    >
+                                </li>
+                                <li class="search-item">
+                                    <a style="font-size: 13px; color: #888; margin-right: 8px" href=""
+                                        >Phụ kiện xe đạp</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-right col-md-3">
+                        <div class="header-right__icons justify-content-center">
+                            <div class="header-right__acount me-2">
+                                <img
+                                    src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-account.png?1726653723228"
+                                    alt="icon-account"
+                                />
+                                <div class="account-action d-none">
+                                    <a href="/account/login" title="Đăng nhập">Đăng nhập</a>
+                                    <a href="/account/register" title="Đăng ký">Đăng ký</a>
+                                </div>
+                            </div>
+                            <div class="header-right__cart_">
+                                <a class="header-right__cart-link" href="#" title="Giỏ hàng">
+                                    <img
+                                        class="header-right__cart-icon"
+                                        src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-cart.png?1726653723228"
+                                        alt="icon-cart"
+                                    />
+
+                                    <span class="header-right_count-cart count_item_pr">3</span>
+                                </a>
+                                <div class="top-cart-content_">
+                                    <ul id="cart-sidebar" class="mini-products-list count_li list-unstyled">
+                                        <ul class="list-cart">
+                                            <li class="cart-item">
+                                                <div class="list-item-cart_wrap-img">
+                                                    <img
+                                                        class="list-item-cart_img"
+                                                        src="https://bizweb.dktcdn.net/thumb/compact/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="list-item-cart_info">
+                                                    <p class="list-item-cart_product-name">
+                                                        Xe đạp đường trường Domane AL 5 đĩa Xe đạp đường trường Domane
+                                                        AL 5 Xe đạp đường trường Domane AL 5 đĩa đĩa
+                                                    </p>
+                                                    <p class="list-item-cart_product-price">
+                                                        32.234.433đ <span class="list-item-cart_count">x 2</span>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="cart-item">
+                                                <div class="list-item-cart_wrap-img">
+                                                    <img
+                                                        class="list-item-cart_img"
+                                                        src="https://bizweb.dktcdn.net/thumb/compact/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="list-item-cart_info">
+                                                    <p class="list-item-cart_product-name">
+                                                        Xe đạp đường trường Domane AL 5 đĩa
+                                                    </p>
+                                                    <p class="list-item-cart_product-price">
+                                                        32.234.433đ <span class="list-item-cart_count">x 2</span>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="cart-item">
+                                                <div class="list-item-cart_wrap-img">
+                                                    <img
+                                                        class="list-item-cart_img"
+                                                        src="https://bizweb.dktcdn.net/thumb/compact/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="list-item-cart_info">
+                                                    <p class="list-item-cart_product-name">
+                                                        Xe đạp đường trường Domane AL 5 đĩa
+                                                    </p>
+                                                    <p class="list-item-cart_product-price">
+                                                        32.234.433đ <span class="list-item-cart_count">x 2</span>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="cart-item">
+                                                <div class="list-item-cart_wrap-img">
+                                                    <img
+                                                        class="list-item-cart_img"
+                                                        src="https://bizweb.dktcdn.net/thumb/compact/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg"
+                                                        alt=""
+                                                    />
+                                                </div>
+                                                <div class="list-item-cart_info">
+                                                    <p class="list-item-cart_product-name">
+                                                        Xe đạp đường trường Domane AL 5 đĩa
+                                                    </p>
+                                                    <p class="list-item-cart_product-price">
+                                                        32.234.433đ <span class="list-item-cart_count">x 2</span>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="top-subtotal w-100">
+                                            <span style="font-weight: 500">Tổng tiền tạm tính:</span>
+                                            <span class="price price_big" style="color: red">69.680.000₫</span>
+                                        </div>
+                                        <div class="btn-checkout_cart-icon text-center w-100">
+                                            <button type="button" class="btn btn-dark w-100">
+                                                Tiến hành thanh toán
+                                            </button>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Slider -->
         <div class="slider-wrap container-fluid">
@@ -1029,6 +1202,17 @@
                                             src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/img-3561-1296x-fef3b91638234f2088f2be987bea88f6-large.jpg?v=1721810970720"
                                             alt=""
                                         />
+                                        <div class="action-bar">
+                                            <a href="#" class="action-bar_icon border-end">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-options.png?1726653723228"
+                                                    alt=""
+                                            /></a>
+
+                                            <a href="#" class="action-bar_icon">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="product-item__info">
@@ -1112,6 +1296,17 @@
                                             src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/fmb-014-cfd66e18-8194-46e1-b716-4aed6db0e642-1296x-6da0ae1b0fde40a38051899f098b553c-large.jpg?v=1721811025710"
                                             alt=""
                                         />
+                                        <div class="action-bar">
+                                            <a href="#" class="action-bar_icon border-end">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-options.png?1726653723228"
+                                                    alt=""
+                                            /></a>
+
+                                            <a href="#" class="action-bar_icon">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="product-item__info">
@@ -1195,6 +1390,15 @@
                                             src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/xtouring-handlebar-harness-3-1296x-c20842ae29964a928146e582ad9c3563-large.jpg?v=1721811066087"
                                             alt=""
                                         />
+                                        <div class="action-bar">
+                                            <a href="#" class="action-bar_icon border-end">
+                                                <i class="fa-solid fa-cart-shopping"></i
+                                            ></a>
+
+                                            <a href="#" class="action-bar_icon">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="product-item__info">
@@ -1658,13 +1862,16 @@
 
                 <!-- //Product -->
                 <div class="product-flashsale row" style="margin-top: 20px">
-                    <div class="product-flashsale__heading col-md-12">
-                        <div>
-                            <h3 style="width: 278px">Ưu đãi <span class="d-block fs-4">Phụ tùng xe đạp</span></h3>
+                    <div class="product-section__heading col-md-12">
+                        <div class="">
+                            <h3>ƯU ĐÃI PHỤ TÙNG XE ĐẠP</h3>
+                            <p class="promotion-timer d-none">Kết thúc sau <span class="countdown"></span></p>
                         </div>
-                        <div class="text-center">
-                            <a href="#" v class="btn-load_more" style="width: 150px; height: 48px">Xem tất cả </a>
-                        </div>
+                        <a href="#" v class="btn-load_more d-block"
+                            >Xem tất cả
+                            <span style="transform: translateY(2px); display: inline-block"
+                                ><ion-icon name="chevron-forward-outline"></ion-icon></span
+                        ></a>
                     </div>
 
                     <div class="col-md-12">
@@ -2110,28 +2317,107 @@
         </main>
 
         <!-- Footer -->
-        <footer
-            class="footer"
-            style="height: 50px; margin-top: 30px; background-color: rgb(131, 148, 148); text-align: center"
-        >
-            <p>&copy; 2024 My E-commerce Site. All rights reserved.</p>
+        <!-- Footer -->
+        <footer class="footer" style="color: white; padding: 30px; background-color: #292929; margin-top: 100px">
+            <div class="container">
+                <div class="row">
+                    <!-- Phần 1: Thông tin cửa hàng -->
+                    <div class="col-md-3 footer-section">
+                        <img
+                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/logo-footer.png?1726653723228"
+                            alt=""
+                            class="mb-3"
+                        />
+                        <p>Cửa hàng xe đạp EGA</p>
+                        <p>
+                            Cửa hàng uy tín và chất lượng, cam kết mang đến những trải nghiệm mua sắm tiện lợi và hiện
+                            đại.
+                        </p>
+                        <p>Mã số thuế: 12345678999</p>
+                        <p>Địa chỉ: 70 Lu Gia, District 11, Ho Chi Minh City</p>
+                        <p>Số điện thoại: 19006750</p>
+                        <p>Email: support@sapo.vn</p>
+                        <p>© Bản quyền thuộc về EGANY | Cung cấp bởi Sapo</p>
+                    </div>
+
+                    <!-- Phần 2: Hỗ trợ khách hàng -->
+                    <div class="col-md-3 footer-section">
+                        <h4 class="mb-3">Hỗ trợ khách hàng</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Cửa hàng</a></li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                            <li><a href="#">Khuyến mãi Combo</a></li>
+                            <li><a href="#">Khuyến mãi Mua X tặng Y</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Phần 3: Chính sách -->
+                    <div class="col-md-3 footer-section">
+                        <h4 class="mb-3">Chính sách</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Chính sách giao hàng</a></li>
+                            <li><a href="#">Điều khoản dịch vụ</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Chương trình cộng tác viên</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Phần 4: Đăng ký nhận tin -->
+                    <div class="col-md-3 footer-section">
+                        <h4 class="mb-3">Đăng ký nhận tin</h4>
+                        <p>Bạn muốn nhận khuyến mãi đặc biệt? Đăng ký ngay.</p>
+                        <form class="position-relative">
+                            <input
+                                type="email"
+                                placeholder="Nhập địa chỉ email"
+                                class="footer-input w-100"
+                                style="padding: 10px 16px; border-radius: 50px"
+                            />
+                            <button
+                                type="submit"
+                                class="footer-button position-absolute"
+                                style="
+                                    top: 50%;
+                                    right: 1%;
+                                    background-color: #292929;
+                                    padding: 8px 20px;
+                                    color: white;
+                                    border-radius: 50px;
+                                    transform: translateY(-50%);
+                                    width: 115px;
+                                "
+                            >
+                                Đăng ký
+                            </button>
+                        </form>
+                        <div class="social-icons d-none">
+                            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                            <a href="#"><i class="fab fa-zalo"></i> Zalo</a>
+                            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                            <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
 
         <!-- Ionicons  -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <!-- Bootstrap JS and dependencies -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
         <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
+
         <!-- Link Jquery -->
         <script src="./assets/libs/jquery/jquery-3.7.0.min.js"></script>
-        <!-- own carousel  -->
-        <script src="./assets/libs/jquery/jquery-3.7.0.min.js"></script>
-        <script src="./assets/libs/owlcarousel/owl.carousel.min.js"></script>
+
         <!-- Slick carousel -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

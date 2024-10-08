@@ -26,8 +26,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     // Hàm hiển thị nội dung khi hover
     function initHover(triggerSelector, contentSelector) {
-        const $trigger = $(triggerSelector); // Phần tử kích hoạt
-        const $content = $(contentSelector); // Phần tử nội dung
+        const $trigger = $(triggerSelector);
+        const $content = $(contentSelector);
 
         // Hiển thị nội dung khi hover vào trigger
         $trigger.hover(
@@ -55,14 +55,28 @@ $(document).ready(function () {
 
     // Khởi tạo hover cho các phần tử cụ thể
     initHover('.header-right__cart', '.top-cart-content');
+    initHover('.header-right__cart_', '.top-cart-content_');
     initHover('.menu-item-fluid', '.menu-item__submenu-fluid');
 });
 
 $(document).ready(function () {
-    $('#deliveryDate').datepicker({
-        format: 'dd/mm/yyyy',
-        autoclose: true,
-        todayHighlight: true,
-        language: 'vi',
+    const resultBox = $('#resultBox');
+    // Khi click vào nút tìm kiếm, hiển thị resultBox
+    $('.icon-action__search').on('click', function (e) {
+        e.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+        resultBox.removeClass('hidden');
+        setTimeout(() => {
+            resultBox.addClass('show');
+        }, 80);
+    });
+
+    // Khi click ra ngoài, ẩn resultBox
+    $(document).on('click', function () {
+        resultBox.addClass('hidden');
+    });
+
+    // Ngăn không ẩn resultBox khi click vào bên trong nó
+    resultBox.on('click', function (e) {
+        e.stopPropagation();
     });
 });
