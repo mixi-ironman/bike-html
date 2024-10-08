@@ -39,25 +39,3 @@ $(document).ready(function () {
         language: 'vi',
     });
 });
-
-function copyCouponCode(elementId) {
-    const couponCode = $('.' + elementId).text();
-    if (navigator.clipboard) {
-        navigator.clipboard
-            .writeText(couponCode)
-            .then(() => {
-                const $button = $('.copy-btn');
-                $button.text('Đã sao chép');
-                $button.css('background-color', '#7D726E');
-
-                // Sau 5 giây đổi lại trạng thái nút
-                setTimeout(() => {
-                    $button.text('Sao chép');
-                    $button.css('background-color', 'black');
-                }, 2000);
-            })
-            .catch((err) => {
-                console.error('Không thể sao chép mã: ', err);
-            });
-    }
-}

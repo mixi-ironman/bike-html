@@ -228,6 +228,56 @@ header {
     justify-content: space-around;
 }
 
+.header-right__acount {
+    position: relative;
+}
+
+.account-action {
+    display: none;
+    width: 100px;
+    z-index: 1000;
+    background-color: rgb(67, 66, 66);
+    top: calc(100% + 12px);
+    left: -50%;
+    color: white;
+    border-radius: 10px;
+}
+
+.account-action::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -17%;
+    /* background-color: #dc323d; */
+    left: 29%;
+    transform: translateX(-50%);
+    border-top: 0; /* Loại bỏ cạnh trên */
+    border-left: 14px solid transparent; /* Cạnh trái trong suốt */
+    border-right: 14px solid transparent; /* Cạnh phải trong suốt */
+    border-bottom: 14px solid rgb(67, 66, 66); /* Cạnh dưới có màu để tạo đỉnh nhọn lên trên */
+    z-index: 2400;
+}
+
+.account-action a {
+    font-size: 15px !important;
+    font-weight: 400;
+    margin-bottom: 4px;
+    padding: 5px 10px;
+}
+
+.account-action a:last-of-type {
+    margin-bottom: 0px;
+}
+
+.header-right__acount:hover .account-action {
+    display: block;
+}
+
+.account-action a:hover {
+    background-color: rgb(136, 136, 136, 0.2);
+    border-radius: 10px;
+}
+
 .header-right__cart {
     position: relative;
 }
@@ -443,7 +493,7 @@ header {
 
 /* Danh mục sản phẩm */
 .product-catalog {
-    margin: 100px 0;
+    margin: 50px 0;
 }
 .product-catalog__heading {
     text-align: center;
@@ -524,10 +574,10 @@ header {
 
 /* Coupon list */
 .coupon-list {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .coupon-item {
     display: flex;

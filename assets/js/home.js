@@ -12,42 +12,6 @@ $(document).ready(function () {
     });
 });
 
-// // Lấy các phần tử
-// const searchInput = document.getElementById('searchInput');
-// const searchResults = document.querySelector('.search-results');
-// const overlay = document.querySelector('.overlay');
-
-// // Hiển thị kết quả và overlay khi focus vào input
-// // searchInput.addEventListener('focus', function () {
-// //     searchResults.style.display = 'block'; // Hiển thị phần kết quả
-// //     overlay.style.display = 'block'; // Hiển thị overlay
-// // });
-
-// searchInput.addEventListener('keyup', function () {
-//     searchResults.style.display = 'block'; // Hiển thị phần kết quả
-//     overlay.style.display = 'block'; // Hiển thị overlay
-// });
-
-// // Ẩn kết quả và overlay khi click ra ngoài
-// overlay.addEventListener('click', function () {
-//     searchResults.style.display = 'none'; // Ẩn phần kết quả
-//     overlay.style.display = 'none'; // Ẩn overlay
-// });
-
-// // // Tự động hiển thị kết quả khi người dùng nhập từ khóa
-// // searchInput.addEventListener('keyup', function () {
-// //     const query = searchInput.value.toLowerCase();
-// //     const items = searchResults.querySelectorAll('li');
-
-// //     items.forEach(function (item) {
-// //         if (item.textContent.toLowerCase().includes(query)) {
-// //             item.style.display = 'block';
-// //         } else {
-// //             item.style.display = 'none';
-// //         }
-// //     });
-// // });
-
 function setupSearchWithOverlay(inputId, resultsClass, overlayClass) {
     // Lấy các phần tử
     const searchInput = document.getElementById(inputId);
@@ -71,20 +35,29 @@ function setupSearchWithOverlay(inputId, resultsClass, overlayClass) {
         searchResults.style.display = 'none'; // Ẩn phần kết quả
         overlay.style.display = 'none'; // Ẩn overlay
     });
-
-    // Tự động hiển thị kết quả khi người dùng nhập từ khóa
-    // searchInput.addEventListener('keyup', function () {
-    //     const query = searchInput.value.toLowerCase();
-    //     const items = searchResults.querySelectorAll('li');
-
-    //     items.forEach(function (item) {
-    //         if (item.textContent.toLowerCase().includes(query)) {
-    //             item.style.display = 'block'; // Hiển thị kết quả phù hợp
-    //         } else {
-    //             item.style.display = 'none'; // Ẩn kết quả không phù hợp
-    //         }
-    //     });
-    // });
 }
 
 setupSearchWithOverlay('searchInput', '.search-results', '.overlay');
+
+function copyCouponCode(elementId, button) {
+    const couponCode = $(button).closest('.coupon-item').find('.couponCode').text().trim();
+    // alert(couponCode);
+    if (navigator.clipboard) {
+        navigator.clipboard
+            .writeText(couponCode)
+            .then(() => {
+                const $button = $(button);
+                $button.text('Đã sao chép');
+                $button.css('background-color', '#7D726E');
+
+                // Sau 2 giây đổi lại trạng thái của button đó
+                setTimeout(() => {
+                    $button.text('Sao chép');
+                    $button.css('background-color', 'black');
+                }, 2000);
+            })
+            .catch((err) => {
+                console.error('Không thể sao chép mã: ', err);
+            });
+    }
+}

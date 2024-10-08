@@ -292,9 +292,9 @@
                                 src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-account.png?1726653723228"
                                 alt="icon-account"
                             />
-                            <div class="account-action d-none">
-                                <a href="/account/login" title="Đăng nhập">Đăng nhập</a>
-                                <a href="/account/register" title="Đăng ký">Đăng ký</a>
+                            <div class="account-action position-absolute">
+                                <a class="d-block" href="/account/login" title="Đăng nhập">Đăng nhập</a>
+                                <a class="d-block" href="/account/register" title="Đăng ký">Đăng ký</a>
                             </div>
                         </div>
                         <div class="header-right__cart">
@@ -421,6 +421,7 @@
                                     border: 1px solid rgb(77, 75, 75);
                                     border-radius: 50px;
                                 "
+                                class="search_header"
                             />
                             <button
                                 type="button"
@@ -432,6 +433,7 @@
                                     border-radius: 50px;
                                     background-color: #292929;
                                     color: white;
+                                    transform: translateX(10px);
                                 "
                             >
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -789,7 +791,7 @@
             <!-- Coupon list -->
             <div class="coupon-list row g-2">
                 <div class="col-md-3">
-                    <div class="coupon-item">
+                    <div class="coupon-item d-flex align-items-center p-2 mb-2">
                         <div class="coupon-item__wrap-img">
                             <img
                                 src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
@@ -800,13 +802,28 @@
                         <div class="coupon-item__info">
                             <div class="coupon-item__info-name">Phụ kiện 20%</div>
                             <div class="coupon-item__info-description">Giảm 5% cho tất cả xe đạp trẻ em</div>
-                            <div class="coupon-item__info-code">Mã: <span>Summer5</span></div>
+                            <div class="coupon-item__info-code">Mã: <span class="couponCode">Summer5</span></div>
                             <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
                         </div>
+                        <button
+                            class="copy-btn position-absolute translate--y"
+                            style="
+                                bottom: 25%;
+                                right: 7%;
+                                transform: translateY(30%);
+                                padding: 3px 7px;
+                                font-size: 13px;
+                                background-color: black;
+                                color: white;
+                            "
+                            onclick="copyCouponCode('couponCode',this)"
+                        >
+                            Sao chép
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="coupon-item">
+                    <div class="coupon-item d-flex align-items-center p-2 mb-2">
                         <div class="coupon-item__wrap-img">
                             <img
                                 src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
@@ -817,13 +834,28 @@
                         <div class="coupon-item__info">
                             <div class="coupon-item__info-name">Phụ kiện 20%</div>
                             <div class="coupon-item__info-description">Giảm 5% cho tất cả xe đạp trẻ em</div>
-                            <div class="coupon-item__info-code">Mã: <span>Summer5</span></div>
+                            <div class="coupon-item__info-code">Mã: <span class="couponCode">Summer5</span></div>
                             <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
                         </div>
+                        <button
+                            class="copy-btn position-absolute translate--y"
+                            style="
+                                bottom: 25%;
+                                right: 7%;
+                                transform: translateY(30%);
+                                padding: 3px 7px;
+                                font-size: 13px;
+                                background-color: black;
+                                color: white;
+                            "
+                            onclick="copyCouponCode('couponCode',this)"
+                        >
+                            Sao chép
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="coupon-item">
+                    <div class="coupon-item d-flex align-items-center p-2 mb-2">
                         <div class="coupon-item__wrap-img">
                             <img
                                 src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
@@ -834,26 +866,24 @@
                         <div class="coupon-item__info">
                             <div class="coupon-item__info-name">Phụ kiện 20%</div>
                             <div class="coupon-item__info-description">Giảm 5% cho tất cả xe đạp trẻ em</div>
-                            <div class="coupon-item__info-code">Mã: <span>Summer5</span></div>
+                            <div class="coupon-item__info-code">Mã: <span class="couponCode">Summer5</span></div>
                             <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="coupon-item">
-                        <div class="coupon-item__wrap-img">
-                            <img
-                                src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
-                                alt=""
-                                class="coupon-item__img"
-                            />
-                        </div>
-                        <div class="coupon-item__info">
-                            <div class="coupon-item__info-name">Phụ kiện 20%</div>
-                            <div class="coupon-item__info-description">Giảm 5% cho tất cả xe đạp trẻ em</div>
-                            <div class="coupon-item__info-code">Mã: <span>Summer5</span></div>
-                            <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
-                        </div>
+                        <button
+                            class="copy-btn position-absolute translate--y"
+                            style="
+                                bottom: 25%;
+                                right: 7%;
+                                transform: translateY(30%);
+                                padding: 3px 7px;
+                                font-size: 13px;
+                                background-color: black;
+                                color: white;
+                            "
+                            onclick="copyCouponCode('couponCode',this)"
+                        >
+                            Sao chép
+                        </button>
                     </div>
                 </div>
             </div>
