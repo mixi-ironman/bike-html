@@ -1,3 +1,4 @@
+// slick cẩousel
 $(document).ready(function () {
     $('.slider-list').slick({
         dots: true,
@@ -10,19 +11,78 @@ $(document).ready(function () {
         nextArrow:
             "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
     });
+
+    $('.coupon-list').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
+
+    $('.product-catalog__list').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
 });
 
 function setupSearchWithOverlay(inputId, resultsClass, overlayClass) {
-    // Lấy các phần tử
     const searchInput = document.getElementById(inputId);
     const searchResults = document.querySelector(resultsClass);
     const overlay = document.querySelector(overlayClass);
-
-    // Hiển thị kết quả và overlay khi focus vào input
-    // searchInput.addEventListener('focus', function () {
-    //     searchResults.style.display = 'block'; // Hiển thị phần kết quả
-    //     overlay.style.display = 'block'; // Hiển thị overlay
-    // });
 
     // Hiển thị kết quả và overlay khi keyup vào input
     searchInput.addEventListener('keyup', function () {
