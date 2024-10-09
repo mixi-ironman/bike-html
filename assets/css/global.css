@@ -108,3 +108,29 @@ a {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Màu thanh cuộn khi hover */
 }
+
+/* Stick header */
+.sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* background: linear-gradient(to right, #8ce09d, #fff5c3) !important; */
+    /* background: linear-gradient(to right, #deb8e6, #9ce9ad) !important; */
+    background-color: white;
+    z-index: 9995;
+    animation: slideIndown 0.3s linear;
+}
+@keyframes slideIndown {
+    0% {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate3d(0, 0%, 0);
+    }
+}
