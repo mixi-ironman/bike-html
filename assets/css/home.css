@@ -663,6 +663,7 @@ header {
 
 /* product item */
 .product-list {
+    /* flex-wrap: nowrap; */
 }
 .product-item {
     display: flex;
@@ -813,7 +814,7 @@ header {
 .product-info__lable-sale {
 }
 .product-info__item-color--chosen {
-    /* display: flex; */
+    display: flex;
     margin-top: 10px;
 }
 .product-info__item-color-img {
@@ -1242,8 +1243,8 @@ header {
     }
 
     .mobile-nav__icon.rotated {
-        transform: rotate(180deg); /* Xoay icon 180 độ */
-        transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển tiếp */
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
     }
 
     /* .nav__mobile-item__sub-menu.active {
@@ -1254,6 +1255,7 @@ header {
     } */
 
     .nav__mobile_sub-menu-list {
+        padding-left: 10px;
     }
 
     .nav__mobile_sub-menu-item {
@@ -1262,6 +1264,7 @@ header {
     .nav__mobile_sub-menu-item-link {
         display: block;
         padding: 5px 10px;
+        font-weight: 500;
     }
 
     /* //Carouse */
@@ -1315,10 +1318,6 @@ header {
 
     .slick-slide {
         margin: 0 5px; /* Tạo khoảng cách giữa các slide */
-    }
-
-    .product-info__item-color--chosen {
-        display: flex;
     }
 
     .look-book__item-heading {

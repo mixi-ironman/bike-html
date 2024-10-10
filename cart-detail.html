@@ -51,7 +51,8 @@
         <!-- Header -->
         <header class="header container-fluid">
             <div class="container header-wrap row">
-                <div id="header__logo" class="header__logo">
+                <div id="header__logo" class="header__logo col-4">
+                    <div class="d-none toggle-nav__mobile"><i class="fa-solid fa-bars-staggered"></i></div>
                     <a href="/" class="header__logo-wrapper">
                         <img
                             class="header__logo-img"
@@ -253,7 +254,66 @@
                         <i class="fas fa-chevron-right next disabled"></i>
                     </div>
                 </div>
-                <div class="header-right">
+
+                <div class="nav__mobile d-none">
+                    <div class="nav__acount">
+                        <img
+                            src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-account.png?1726653723228"
+                            alt="icon-account"
+                            class="nav__acount-icon"
+                        />
+                        <div class="nav__title">
+                            <a href="#" class="d-block nav__title-link">Tài khoản</a>
+                            <a href="#" class="d-block nav__title-link">Đăng nhập</a>
+                        </div>
+                    </div>
+                    <ul class="nav__mobile-list">
+                        <li class="nav__mobile-item">
+                            <a class="nav__mobile-link">
+                                <span class="mobile-nav__text">Xe đạp</span>
+                                <span class="mobile-nav__icon-wrapper">
+                                    <i class="fa-solid fa-angle-down mobile-nav__icon"></i>
+                                </span>
+                            </a>
+                            <div class="nav__mobile-item__sub-menu">
+                                <ul class="nav__mobile_sub-menu-list">
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp leo núi</a>
+                                    </li>
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp đường trường</a>
+                                    </li>
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp điện</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__mobile-item">
+                            <a class="nav__mobile-link">
+                                <span class="mobile-nav__text">Phụ tùng xe đạp</span>
+                                <span class="mobile-nav__icon-wrapper">
+                                    <i class="fa-solid fa-angle-down mobile-nav__icon"></i>
+                                </span>
+                            </a>
+                            <div class="nav__mobile-item__sub-menu">
+                                <ul class="nav__mobile_sub-menu-list">
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp leo núi</a>
+                                    </li>
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp đường trường</a>
+                                    </li>
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp điện</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__mobile-item"><a href="#" class="nav__mobile-link">Flash Sale</a></li>
+                    </ul>
+                </div>
+                <div class="header-right col-8">
                     <div class="header-right__lang">
                         <a href=""
                             ><img
@@ -280,7 +340,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="header-right__live">
                         <button type="button" class="bg-white">
                             <i
@@ -408,7 +467,7 @@
         <div id="resultBox" class="container-fluid hidden">
             <div class="container">
                 <div class="row">
-                    <div id="header__logo" class="header__logo col-md-2 align-items-center">
+                    <div id="header__logo" class="header__logo header__logo_ col-sm-5 col-md-5 align-items-center">
                         <a href="" class="header__logo-wrapper">
                             <img
                                 class="header__logo-img"
@@ -419,8 +478,12 @@
                             />
                         </a>
                     </div>
-                    <div class="header_search-box col-md-7 position-relative d-flex flex-column justify-content-center">
-                        <form class="w-100 d-flex justify-content-center align-items-center position-relative">
+                    <div
+                        class="header_search-box header_search-box_ col-md-7 position-relative d-flex flex-column justify-content-center"
+                    >
+                        <form
+                            class="w-100 header_search-box-input_ d-flex justify-content-center align-items-center position-relative"
+                        >
                             <input
                                 type="text"
                                 id="searchInput"
@@ -431,11 +494,11 @@
                                     border: 1px solid rgb(77, 75, 75);
                                     border-radius: 50px;
                                 "
-                                class="search_header"
+                                class="search_header search_header_"
                             />
                             <button
                                 type="button"
-                                class="icon-action__search position-absolute"
+                                class="icon-action__search icon-action__search_ position-absolute"
                                 style="
                                     right: 12%;
                                     width: 80px;
@@ -449,8 +512,6 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
 
-                            <!-- Overlay -->
-                            <div class="overlay"></div>
                             <div class="search-results position-absolute">
                                 <div class="search-results__heading">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -461,8 +522,8 @@
                                         <div class="search-results__layout-display"></div>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <p>Hiển thị kết quả theo:</p>
-                                        <ul class="d-flex">
+                                        <p class="search-results__heading-title">Hiển thị kết quả theo:</p>
+                                        <ul class="d-flex search-results__heading-title_list">
                                             <li
                                                 class="search_by active"
                                                 style="
@@ -554,7 +615,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="header-right col-md-3">
+                    <div class="header-right header-right_ col-md-3">
                         <div class="header-right__icons justify-content-center">
                             <div class="header-right__acount me-2">
                                 <img
@@ -668,7 +729,7 @@
         </div>
 
         <!-- Main Content -->
-        <main class="main-content container">
+        <main class="container main-content">
             <!-- Breadcrumb -->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -796,9 +857,9 @@
                                 <i class="fa-solid fa-caret-right"></i>
                             </div>
 
-                            <!-- Coupon list (Ẩn ban đầu) -->
-                            <div class="coupon-list-overlay"></div>
                             <!-- Lớp overlay -->
+                            <div class="coupon-list-overlay"></div>
+                            <!-- Coupon list (Ẩn ban đầu) -->
                             <div class="coupon-list-container">
                                 <h5 class="text-center">Mã giảm giá</h5>
                                 <div class="coupon-list row g-2 mt-3 border-top">

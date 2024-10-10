@@ -12,7 +12,7 @@ $(document).ready(function () {
             "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
     });
 
-    $('.coupon-list').slick({
+    $('.coupon-list_').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 2,
@@ -65,17 +65,71 @@ $(document).ready(function () {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
                 },
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 },
             },
         ],
+    });
+});
+
+// check nếu mà mobile thì add slick
+$(document).ready(function () {
+    function initializeSlick() {
+        if ($(window).width() < 768) {
+            if (!$('.flashsale__list').hasClass('slick-initialized')) {
+                $('.flashsale__list').slick({
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                });
+            }
+
+            if (!$('.collection-gallery').hasClass('slick-initialized')) {
+                $('.collection-gallery').slick({
+                    infinite: true,
+                    slidesToShow: 1.1,
+                    slidesToScroll: 1,
+                });
+            }
+
+            if (!$('.blog-list').hasClass('slick-initialized')) {
+                $('.blog-list')
+                    .slick({
+                        infinite: false,
+                        slidesToShow: 1.3,
+                        slidesToScroll: 1,
+                    })
+                    .on('setPosition', function () {
+                        // Sau khi slick đã được khởi tạo, chỉnh sửa margin của slick-slide
+                        $('.blog-list .slick-slide').css('margin-right', '15px');
+                    });
+            }
+        } else {
+            if (
+                $('.flashsale__list').hasClass('slick-initialized') ||
+                $('.blog-list').hasClass('slick-initialized') ||
+                $('.collection-gallery').hasClass('slick-initialized')
+            ) {
+                $('.flashsale__list').slick('unslick'); // Bỏ slick trên màn lớn
+                $('.blog-list').slick('unslick');
+                $('.collection-gallery').slick('unslick');
+            }
+        }
+    }
+
+    // Khởi tạo slick dựa trên kích thước màn hình khi tải trang
+    initializeSlick();
+
+    // Kiểm tra lại mỗi khi kích thước màn hình thay đổi
+    $(window).resize(function () {
+        initializeSlick();
     });
 });
 

@@ -82,67 +82,15 @@ $(document).ready(function () {
     });
 });
 
-// check nếu mà mobile thì add slick
-$(document).ready(function () {
-    function initializeSlick() {
-        if ($(window).width() < 768) {
-            if (!$('.flashsale__list').hasClass('slick-initialized')) {
-                $('.flashsale__list').slick({
-                    infinite: true,
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                });
-            }
-
-            if (!$('.collection-gallery').hasClass('slick-initialized')) {
-                $('.collection-gallery').slick({
-                    infinite: true,
-                    slidesToShow: 1.1,
-                    slidesToScroll: 1,
-                });
-            }
-
-            if (!$('.blog-list').hasClass('slick-initialized')) {
-                $('.blog-list')
-                    .slick({
-                        infinite: false,
-                        slidesToShow: 1.3,
-                        slidesToScroll: 1,
-                    })
-                    .on('setPosition', function () {
-                        // Sau khi slick đã được khởi tạo, chỉnh sửa margin của slick-slide
-                        $('.blog-list .slick-slide').css('margin-right', '15px');
-                    });
-            }
-        } else {
-            if (
-                $('.flashsale__list').hasClass('slick-initialized') ||
-                $('.blog-list').hasClass('slick-initialized') ||
-                $('.collection-gallery').hasClass('slick-initialized')
-            ) {
-                $('.flashsale__list').slick('unslick'); // Bỏ slick trên màn lớn
-                $('.blog-list').slick('unslick');
-                $('.collection-gallery').slick('unslick');
-            }
-        }
-    }
-
-    // Khởi tạo slick dựa trên kích thước màn hình khi tải trang
-    initializeSlick();
-
-    // Kiểm tra lại mỗi khi kích thước màn hình thay đổi
-    $(window).resize(function () {
-        initializeSlick();
-    });
-});
-
 // scroll header
 function headerScroll() {
     window.addEventListener('scroll', function () {
         var stickyElement = document.querySelector('.header');
         var contentOffsetTop = document.querySelector('.main-content').offsetTop;
+        // var contentOffsetTop = document.querySelector('.main-content').getBoundingClientRect().top;
+        var scrollPosition = window.scrollY;
 
-        if (window.scrollY >= contentOffsetTop) {
+        if (scrollPosition >= contentOffsetTop) {
             stickyElement.classList.add('sticky');
         } else {
             stickyElement.classList.remove('sticky');
@@ -198,7 +146,7 @@ $(document).ready(function () {
         $('body').css('overflow', 'hidden');
     });
 
-    // Khi bấm vào bất cứ đâu bên ngoài nav bar, ẩn nav bar và overlay với hiệu ứng mượt
+    // Khi bấm vào bất cứ đâu bên ngoài nav bar, ẩn nav bar và overlay
     $(document).on('click', function () {
         navBar.animate(
             {
@@ -221,15 +169,65 @@ $(document).ready(function () {
 });
 
 // accordion
+// $(document).ready(function () {
+//     //toggle footer
+//     $('.footer-section_click').click(function (event) {
+//         event.preventDefault();
+//         toggleAccordion($(this), '.footer-links_click', '.footer-section__icon');
+//     });
+
+//     // toggle sub nav mobile
+//     $('.nav__mobile-item > a').click(function (event) {
+//         event.preventDefault();
+//         toggleAccordion($(this).parent(), '.nav__mobile-item__sub-menu', '.mobile-nav__icon');
+//     });
+
+//     // toggle tab - product detail
+//     if ($(window).width() < 768) {
+//         alert('ngu');
+//         $('.product-detail__nav-item > .product-detail__tab-link').click(function (event) {
+//             event.preventDefault();
+//             $('.product-detail__content-mobile').removeClass('d-none');
+//             toggleAccordion($(this).parent(), '.product-detail__content-mobile', '.mobile-nav__icon');
+//         });
+//     }
+// });
+
 $(document).ready(function () {
-    //toggle footer
-    $('.footer-section_click').click(function () {
+    // toggle footer
+    $('.footer-section_click').click(function (event) {
+        event.preventDefault();
         toggleAccordion($(this), '.footer-links_click', '.footer-section__icon');
     });
 
+    // toggle sub nav mobile
     $('.nav__mobile-item > a').click(function (event) {
-        event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+        event.preventDefault();
         toggleAccordion($(this).parent(), '.nav__mobile-item__sub-menu', '.mobile-nav__icon');
+    });
+
+    // Hàm kiểm tra kích thước màn hình và gán sự kiện cho tab trên màn mobile
+    function handleProductDetailTabClick() {
+        if ($(window).width() < 768) {
+            // Đảm bảo sự kiện chỉ được gán một lần khi ở màn hình nhỏ
+            $('.product-detail__nav-item > .product-detail__tab-link').off('click'); // Gỡ bỏ sự kiện cũ
+            $('.product-detail__nav-item > .product-detail__tab-link').on('click', function (event) {
+                event.preventDefault();
+                $('.product-detail__content-mobile').removeClass('d-none');
+                toggleAccordion($(this).parent(), '.product-detail__content-mobile', '.mobile-nav__icon');
+            });
+        } else {
+            $('.product-detail__content-mobile').addClass('d-none');
+            $('.mobile-nav__icon-wrapper').addClass('d-none');
+        }
+    }
+
+    // Gọi hàm khi document load
+    handleProductDetailTabClick();
+
+    // Gọi lại hàm khi thay đổi kích thước cửa sổ
+    $(window).resize(function () {
+        handleProductDetailTabClick();
     });
 });
 

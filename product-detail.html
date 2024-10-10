@@ -38,12 +38,14 @@
         <link rel="stylesheet" href="./assets/css/global.css" />
         <link rel="stylesheet" href="./assets/css/home.css" />
         <link rel="stylesheet" href="./assets/css/product.css" />
+        <link rel="stylesheet" href="./assets/css/cart-detail.css" />
     </head>
     <body>
         <!-- Header -->
         <header class="header container-fluid">
             <div class="container header-wrap row">
-                <div id="header__logo" class="header__logo">
+                <div id="header__logo" class="header__logo col-4">
+                    <div class="d-none toggle-nav__mobile"><i class="fa-solid fa-bars-staggered"></i></div>
                     <a href="/" class="header__logo-wrapper">
                         <img
                             class="header__logo-img"
@@ -245,7 +247,66 @@
                         <i class="fas fa-chevron-right next disabled"></i>
                     </div>
                 </div>
-                <div class="header-right">
+
+                <div class="nav__mobile d-none">
+                    <div class="nav__acount">
+                        <img
+                            src="//bizweb.dktcdn.net/100/521/820/themes/957130/assets/icon-account.png?1726653723228"
+                            alt="icon-account"
+                            class="nav__acount-icon"
+                        />
+                        <div class="nav__title">
+                            <a href="#" class="d-block nav__title-link">Tài khoản</a>
+                            <a href="#" class="d-block nav__title-link">Đăng nhập</a>
+                        </div>
+                    </div>
+                    <ul class="nav__mobile-list">
+                        <li class="nav__mobile-item">
+                            <a class="nav__mobile-link">
+                                <span class="mobile-nav__text">Xe đạp</span>
+                                <span class="mobile-nav__icon-wrapper">
+                                    <i class="fa-solid fa-angle-down mobile-nav__icon"></i>
+                                </span>
+                            </a>
+                            <div class="nav__mobile-item__sub-menu">
+                                <ul class="nav__mobile_sub-menu-list">
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp leo núi</a>
+                                    </li>
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp đường trường</a>
+                                    </li>
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp điện</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__mobile-item">
+                            <a class="nav__mobile-link">
+                                <span class="mobile-nav__text">Phụ tùng xe đạp</span>
+                                <span class="mobile-nav__icon-wrapper">
+                                    <i class="fa-solid fa-angle-down mobile-nav__icon"></i>
+                                </span>
+                            </a>
+                            <div class="nav__mobile-item__sub-menu">
+                                <ul class="nav__mobile_sub-menu-list">
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp leo núi</a>
+                                    </li>
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp đường trường</a>
+                                    </li>
+                                    <li class="nav__mobile_sub-menu-item">
+                                        <a class="nav__mobile_sub-menu-item-link">Xe đạp điện</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav__mobile-item"><a href="#" class="nav__mobile-link">Flash Sale</a></li>
+                    </ul>
+                </div>
+                <div class="header-right col-8">
                     <div class="header-right__lang">
                         <a href=""
                             ><img
@@ -272,7 +333,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="header-right__live">
                         <button type="button" class="bg-white">
                             <i
@@ -400,7 +460,7 @@
         <div id="resultBox" class="container-fluid hidden">
             <div class="container">
                 <div class="row">
-                    <div id="header__logo" class="header__logo col-md-2 align-items-center">
+                    <div id="header__logo" class="header__logo header__logo_ col-sm-5 col-md-5 align-items-center">
                         <a href="" class="header__logo-wrapper">
                             <img
                                 class="header__logo-img"
@@ -411,8 +471,12 @@
                             />
                         </a>
                     </div>
-                    <div class="header_search-box col-md-7 position-relative d-flex flex-column justify-content-center">
-                        <form class="w-100 d-flex justify-content-center align-items-center position-relative">
+                    <div
+                        class="header_search-box header_search-box_ col-md-7 position-relative d-flex flex-column justify-content-center"
+                    >
+                        <form
+                            class="w-100 header_search-box-input_ d-flex justify-content-center align-items-center position-relative"
+                        >
                             <input
                                 type="text"
                                 id="searchInput"
@@ -423,11 +487,11 @@
                                     border: 1px solid rgb(77, 75, 75);
                                     border-radius: 50px;
                                 "
-                                class="search_header"
+                                class="search_header search_header_"
                             />
                             <button
                                 type="button"
-                                class="icon-action__search position-absolute"
+                                class="icon-action__search icon-action__search_ position-absolute"
                                 style="
                                     right: 12%;
                                     width: 80px;
@@ -441,8 +505,6 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
 
-                            <!-- Overlay -->
-                            <div class="overlay"></div>
                             <div class="search-results position-absolute">
                                 <div class="search-results__heading">
                                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -453,8 +515,8 @@
                                         <div class="search-results__layout-display"></div>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <p>Hiển thị kết quả theo:</p>
-                                        <ul class="d-flex">
+                                        <p class="search-results__heading-title">Hiển thị kết quả theo:</p>
+                                        <ul class="d-flex search-results__heading-title_list">
                                             <li
                                                 class="search_by active"
                                                 style="
@@ -546,7 +608,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="header-right col-md-3">
+                    <div class="header-right header-right_ col-md-3">
                         <div class="header-right__icons justify-content-center">
                             <div class="header-right__acount me-2">
                                 <img
@@ -660,7 +722,7 @@
         </div>
 
         <!-- Main Content -->
-        <main class="main-content container">
+        <main class="container main-content">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
@@ -690,12 +752,24 @@
                                 alt=""
                             />
                         </div>
-                        <div class="col-xl-10 product-detail_wrap-img_main">
-                            <img
-                                class="product-detail_img-main"
-                                src="https://bizweb.dktcdn.net/thumb/1024x1024/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
-                                alt=""
-                            />
+                        <div class="col-xl-10">
+                            <div class="product-detail_wrap-img_main-list">
+                                <div class="product-detail__img_main-item">
+                                    <img
+                                        class="product-detail_img-main"
+                                        src="https://bizweb.dktcdn.net/thumb/1024x1024/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
+                                        alt=""
+                                    />
+                                </div>
+
+                                <div class="product-detail__img_main-item">
+                                    <img
+                                        class="product-detail_img-main"
+                                        src="https://bizweb.dktcdn.net/thumb/1024x1024/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
                         </div>
                         <div class="share-group">
                             <strong class="share-group__title">Chia sẻ</strong>
@@ -788,8 +862,104 @@
                                 <li class="discount-code-item">GIAM150K</li>
                                 <li class="discount-code-item">SERVICE30</li>
                                 <li class="discount-code-item">GIAM20</li>
-                                <span class="d-inline-block"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                                <span class="d-inline-block coupon-toggle-btn"
+                                    ><ion-icon name="chevron-forward-outline"></ion-icon
+                                ></span>
                             </ul>
+
+                            <!-- Lớp overlay -->
+                            <div class="coupon-list-overlay"></div>
+                            <!-- Coupon list (Ẩn ban đầu) -->
+                            <div class="coupon-list-container">
+                                <h5 class="text-center">Mã giảm giá</h5>
+                                <div class="coupon-list row g-2 mt-3 border-top">
+                                    <div class="col-12">
+                                        <div class="coupon-item d-flex align-items-center p-2 mb-2">
+                                            <div class="coupon-item__wrap-img">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
+                                                    alt=""
+                                                    class="coupon-item__img"
+                                                />
+                                            </div>
+                                            <div class="coupon-item__info">
+                                                <div class="coupon-item__info-name">Phụ kiện 20%</div>
+                                                <div class="coupon-item__info-description">
+                                                    Giảm 5% cho tất cả xe đạp trẻ em
+                                                </div>
+                                                <div class="coupon-item__info-code">
+                                                    Mã: <span class="couponCode">Summer5</span>
+                                                </div>
+                                                <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
+                                            </div>
+                                            <button
+                                                class="copy-btn position-absolute translate--y"
+                                                style="
+                                                    bottom: 25%;
+                                                    right: 7%;
+                                                    transform: translateY(30%);
+                                                    padding: 3px 7px;
+                                                    font-size: 13px;
+                                                    background-color: black;
+                                                    color: white;
+                                                "
+                                                onclick="copyCouponCode('couponCode',this)"
+                                            >
+                                                Sao chép
+                                            </button>
+                                        </div>
+                                        <div class="coupon-item d-flex align-items-center p-2 mb-2">
+                                            <div class="coupon-item__wrap-img">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/medium/100/521/820/themes/957130/assets/coupon_1_img.png?1726653723228"
+                                                    alt=""
+                                                    class="coupon-item__img"
+                                                />
+                                            </div>
+                                            <div class="coupon-item__info">
+                                                <div class="coupon-item__info-name">Phụ kiện 20%</div>
+                                                <div class="coupon-item__info-description">
+                                                    Giảm 5% cho tất cả xe đạp trẻ em
+                                                </div>
+                                                <div class="coupon-item__info-code">
+                                                    Mã: <span class="couponCode">Summer5</span>
+                                                </div>
+                                                <div class="coupon-item__info-expiry">HSD: <span>31/12/2023</span></div>
+                                            </div>
+                                            <button
+                                                class="copy-btn position-absolute translate--y d-none"
+                                                style="
+                                                    bottom: 25%;
+                                                    right: 7%;
+                                                    transform: translateY(30%);
+                                                    padding: 3px 7px;
+                                                    font-size: 13px;
+                                                    background-color: black;
+                                                    color: white;
+                                                "
+                                                onclick="copyCouponCode('couponCode', this)"
+                                            >
+                                                Sao chép
+                                            </button>
+                                            <button
+                                                class="position-absolute translate--y"
+                                                style="
+                                                    bottom: 25%;
+                                                    right: 7%;
+                                                    transform: translateY(30%);
+                                                    background-color: white;
+                                                "
+                                            >
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/outdated.png?1726653723228"
+                                                    alt=""
+                                                    style="width: 100%"
+                                                />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- product option -->
@@ -916,9 +1086,60 @@
                 <div class="col-xl-12">
                     <div class="product-detail__tab mb-3">
                         <ul class="product-detail__nav-list">
-                            <li class="product-detail__nav-item active">Mô tả sản phẩm</li>
-                            <li class="product-detail__nav-item">Chính sách giao hàng</li>
-                            <li class="product-detail__nav-item">Chính sách đổi trả</li>
+                            <li class="product-detail__nav-item active">
+                                <a class="product-detail__tab-link">
+                                    <span class="mobile-nav__text">Mô tả sản phẩm</span>
+                                    <span class="mobile-nav__icon-wrapper d-none" style="float: right">
+                                        <i class="fa-solid fa-angle-down mobile-nav__icon"></i>
+                                    </span>
+                                </a>
+                                <div class="product-detail__content-mobile d-none">
+                                    <div class="product-detail__description">
+                                        <p>
+                                            1. Điều kiện đổi trả Quý Khách hàng cần kiểm tra tình trạng hàng hóa và có
+                                            thể đổi hàng/ trả lại hàng ngay tại thời điểm giao/nhận hàng trong những
+                                            trường hợp sau: Hàng không đúng chủng loại, mẫu mã trong đơn hàng đã đặt
+                                            hoặc như trên website tại thời điểm đặt hàng
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-detail__nav-item">
+                                <a class="product-detail__tab-link">
+                                    <span class="mobile-nav__text">Chính sách giao hàng</span>
+                                    <span class="mobile-nav__icon-wrapper d-none" style="float: right">
+                                        <i class="fa-solid fa-angle-down mobile-nav__icon"></i>
+                                    </span>
+                                </a>
+                                <div class="product-detail__content-mobile d-none">
+                                    <div class="product-detail__description">
+                                        <p>
+                                            1. Điều kiện đổi trả Quý Khách hàng cần kiểm tra tình trạng hàng hóa và có
+                                            thể đổi hàng/ trả lại hàng ngay tại thời điểm giao/nhận hàng trong những
+                                            trường hợp sau: Hàng không đúng chủng loại, mẫu mã trong đơn hàng đã đặt
+                                            hoặc như trên website tại thời điểm đặt hàng
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-detail__nav-item">
+                                <a class="product-detail__tab-link">
+                                    <span class="mobile-nav__text">Chính sách đổi trả</span>
+                                    <span class="mobile-nav__icon-wrapper d-none" style="float: right">
+                                        <i class="fa-solid fa-angle-down mobile-nav__icon"></i>
+                                    </span>
+                                </a>
+                                <div class="product-detail__content-mobile d-none">
+                                    <div class="product-detail__description">
+                                        <p>
+                                            1. Điều kiện đổi trả Quý Khách hàng cần kiểm tra tình trạng hàng hóa và có
+                                            thể đổi hàng/ trả lại hàng ngay tại thời điểm giao/nhận hàng trong những
+                                            trường hợp sau: Hàng không đúng chủng loại, mẫu mã trong đơn hàng đã đặt
+                                            hoặc như trên website tại thời điểm đặt hàng
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
 
@@ -1245,904 +1466,1295 @@
                     </div>
                 </div>
 
-                <!-- Sản phẩm cùng loại(product-equalprice) -->
-                <div class="product-section row" style="margin-top: 100px">
-                    <div class="product-section__heading col-md-12">
-                        <div class="">
+                <!-- Sản phẩm cùng loại -->
+                <div class="col-md-12">
+                    <div class="product-section row">
+                        <div class="product-section__heading col-md-12">
                             <h3>Sản phẩm cùng loại</h3>
                             <p class="promotion-timer d-none">Kết thúc sau <span class="countdown"></span></p>
                         </div>
-                        <a href="#" v class="btn-load_more d-none"
-                            >Xem tất cả
-                            <span style="transform: translateY(2px); display: inline-block"
-                                ><ion-icon name="chevron-forward-outline"></ion-icon></span
-                        ></a>
-                    </div>
-
-                    <div class="product-list row g-2">
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-3-d30ef3382f6444c7a7d333bb0a0152fc-large.jpg?v=1721810923400"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                        <div class="col-xl-12">
+                            <div class="product-list similar_products-list row g-2">
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="#" class="product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-3-d30ef3382f6444c7a7d333bb0a0152fc-large.jpg?v=1721810923400"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
                                 </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-1-b7ae5beb3d7b4ed78af35456402e4081.jpg?v=1721783240913"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-3-4a49ba5f8a06422d9bbd84ec7d4f3a8c-large.jpg?v=1721810485640"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-1-b7ae5beb3d7b4ed78af35456402e4081.jpg?v=1721783240913"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-3-4a49ba5f8a06422d9bbd84ec7d4f3a8c-large.jpg?v=1721810485640"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
                                 </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg?v=1721783248057"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-4-d1a1d91bb19b454db88accd5baaedd88-large.jpg?v=1721810883717"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg?v=1721783248057"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail d-none"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-4-d1a1d91bb19b454db88accd5baaedd88-large.jpg?v=1721810883717"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
                                 </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
                                 </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row d-none">
-                        <div class="col-md-12 text-center mt-4">
-                            <a href="#" v class="btn-load_more"
-                                >Xem tất cả
-                                <span style="transform: translateY(2px); display: inline-block"
-                                    ><ion-icon name="chevron-forward-outline"></ion-icon></span
-                            ></a>
                         </div>
                     </div>
                 </div>
-
+                <div style="height: 30px; opacity: 0"></div>
+                <!-- Sản phẩm cùng phân khúc -->
+                <div class="col-md-12">
+                    <div class="product-section row">
+                        <div class="product-section__heading col-md-12">
+                            <h3>Sản phẩm cùng phân khúc</h3>
+                            <p class="promotion-timer d-none">Kết thúc sau <span class="countdown"></span></p>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="product-list same_products-list row g-2">
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="#" class="product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-3-d30ef3382f6444c7a7d333bb0a0152fc-large.jpg?v=1721810923400"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="#" class="product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-3-d30ef3382f6444c7a7d333bb0a0152fc-large.jpg?v=1721810923400"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-1-b7ae5beb3d7b4ed78af35456402e4081.jpg?v=1721783240913"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-3-4a49ba5f8a06422d9bbd84ec7d4f3a8c-large.jpg?v=1721810485640"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg?v=1721783248057"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail d-none"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-4-d1a1d91bb19b454db88accd5baaedd88-large.jpg?v=1721810883717"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 30px; opacity: 0"></div>
                 <!-- Sản phẩm đã xem -->
-                <div class="product-section row" style="margin-top: 100px">
-                    <div class="product-section__heading col-md-12">
-                        <div class="">
+                <div class="col-md-12">
+                    <div class="product-section row">
+                        <div class="product-section__heading col-md-12">
                             <h3>Sản phẩm đã xem</h3>
                             <p class="promotion-timer d-none">Kết thúc sau <span class="countdown"></span></p>
                         </div>
-                        <a href="#" v class="btn-load_more d-none"
-                            >Xem tất cả
-                            <span style="transform: translateY(2px); display: inline-block"
-                                ><ion-icon name="chevron-forward-outline"></ion-icon></span
-                        ></a>
-                    </div>
-
-                    <div class="product-list row g-2">
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-3-d30ef3382f6444c7a7d333bb0a0152fc-large.jpg?v=1721810923400"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-
-                                    <!-- <div class="product-info__rate">
-                                            <ul class="d-flex">
-                                                <li class="product-detail_rating-item">
-                                                    <i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                                </li>
-                                                <li class="product-detail_rating-item">
-                                                    <i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                                </li>
-                                                <li class="product-detail_rating-item">
-                                                    <i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                                </li>
-                                                <li class="product-detail_rating-item">
-                                                    <i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                                </li>
-                                                <li class="product-detail_rating-item">
-                                                    <i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                                </li>
-                                            </ul>
-                                        </div> -->
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                        <div class="col-xl-12">
+                            <div class="product-list viewed_products-list row g-2">
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="#" class="product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-3-d30ef3382f6444c7a7d333bb0a0152fc-large.jpg?v=1721810923400"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
                                 </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-1-b7ae5beb3d7b4ed78af35456402e4081.jpg?v=1721783240913"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-3-4a49ba5f8a06422d9bbd84ec7d4f3a8c-large.jpg?v=1721810485640"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="#" class="product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-1-1a1526617dea4d76a4008602b4f267ae.jpg?v=1721783249583"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/11-3-d30ef3382f6444c7a7d333bb0a0152fc-large.jpg?v=1721810923400"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
                                 </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg?v=1721783248057"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-4-d1a1d91bb19b454db88accd5baaedd88-large.jpg?v=1721810883717"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-1-b7ae5beb3d7b4ed78af35456402e4081.jpg?v=1721783240913"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/2-3-4a49ba5f8a06422d9bbd84ec7d4f3a8c-large.jpg?v=1721810485640"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
                                 </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-1-e3e40a3c3bce4441afc2a1b791712fd8.jpg?v=1721783248057"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail d-none"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/10-4-d1a1d91bb19b454db88accd5baaedd88-large.jpg?v=1721810883717"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
                                 </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1-5">
-                            <div class="product-item translate--y">
-                                <a href="" class="d-block product-item__img-link">
-                                    <div class="product-item__wrap-img">
-                                        <img
-                                            class="product-item__img"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
-                                            alt=""
-                                        />
-                                        <img
-                                            class="product-item__img-thumnail"
-                                            src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                        />
-                                    </div>
-                                </a>
-                                <div class="product-item__info">
-                                    <p class="product-info__vendor">Khác</p>
-                                    <p class="product-info__name">Xe đạp đường trường Ultegra</p>
-                                    <div class="product-comment__star-rating">
-                                        <span class="star-rating__star" data-value="1"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="2"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="3"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="4"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                        <span class="star-rating__star" data-value="5"
-                                            ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
-                                        </span>
-                                    </div>
-                                    <div class="product-info__price-box">
-                                        <p class="product-info__contact d-none">Liên hệ</p>
-                                        <p class="product-info__price">32.590.000đ</p>
-                                        <div class="d-flex">
-                                            <p class="product-info__product-origin">44.434.223đ</p>
-                                            <span
-                                                style="
-                                                    margin-left: 10px;
-                                                    font-size: 12px;
-                                                    background-color: rgb(235, 48, 48);
-                                                    color: white;
-                                                    padding: 1px 8px;
-                                                    border-radius: 10px;
-                                                    display: inline-block;
-                                                "
-                                                >-28%</span
-                                            >
+                                <div class="col-md-3">
+                                    <div class="product-item translate--y">
+                                        <a href="" class="d-block product-item__img-link">
+                                            <div class="product-item__wrap-img">
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product7-ded119fb-87ab-4bf8-b95b-34fa0c99bcb2-2000x-71b845eb47424dd89943b6bf36b0f662.jpg?v=1721783246740"
+                                                    alt=""
+                                                />
+                                                <img
+                                                    class="product-item__img-thumnail"
+                                                    src="https://bizweb.dktcdn.net/thumb/grande/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </a>
+                                        <div class="product-item__info">
+                                            <p class="product-info__vendor">Khác</p>
+                                            <p class="product-info__name">Xe đạp đường trường Ultegra</p>
+                                            <!-- Product Rating -->
+                                            <div class="product-comment__star-rating">
+                                                <span class="star-rating__star" data-value="1"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="2"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="3"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="4"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                                <span class="star-rating__star" data-value="5"
+                                                    ><i class="fa-regular fa-star" style="color: #ffbe00"></i>
+                                                </span>
+                                            </div>
+                                            <div class="product-info__price-box">
+                                                <p class="product-info__contact d-none">Liên hệ</p>
+                                                <p class="product-info__price">32.590.000đ</p>
+                                                <div class="d-flex">
+                                                    <p class="product-info__product-origin">44.434.223đ</p>
+                                                    <span
+                                                        style="
+                                                            margin-left: 10px;
+                                                            font-size: 12px;
+                                                            background-color: rgb(235, 48, 48);
+                                                            color: white;
+                                                            padding: 1px 8px;
+                                                            border-radius: 10px;
+                                                            display: inline-block;
+                                                        "
+                                                        >-28%</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="product-info__item-color--chosen">
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                                <img
+                                                    src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
+                                                    alt=""
+                                                    class="product-info__item-color-img"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="product-item__sold-info">
+                                            <p class="product-item__sold-title">Vừa mở bán</p>
+                                            <div class="product-item__sold-bar">
+                                                <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                            </div>
+                                            <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                         </div>
                                     </div>
-                                    <div class="product-info__item-color--chosen">
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                        <img
-                                            src="https://bizweb.dktcdn.net/thumb/thumb/100/521/820/products/product8-777066ec-c6a3-46a7-a2fc-0c6092eec243-2000x-01f733e5ed38488190ff756c4ec71d93.jpg?v=1721783246740"
-                                            alt=""
-                                            class="product-info__item-color-img"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="product-item__sold-info">
-                                    <p class="product-item__sold-title">Vừa mở bán</p>
-                                    <div class="product-item__sold-bar">
-                                        <div class="product-item__sold-bar-fill" style="width: 10%"></div>
-                                    </div>
-                                    <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row d-none">
-                        <div class="col-md-12 text-center mt-4">
-                            <a href="#" v class="btn-load_more"
-                                >Xem tất cả
-                                <span style="transform: translateY(2px); display: inline-block"
-                                    ><ion-icon name="chevron-forward-outline"></ion-icon></span
-                            ></a>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- Footer -->
         <!-- Footer -->
         <footer class="footer" style="color: white; padding: 30px; background-color: #292929; margin-top: 100px">
             <div class="container">
@@ -2152,7 +2764,7 @@
                         <img
                             src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/logo-footer.png?1726653723228"
                             alt=""
-                            class="mb-3"
+                            class="mb-3 footer-logo"
                         />
                         <p>Cửa hàng xe đạp EGA</p>
                         <p>
@@ -2168,34 +2780,48 @@
 
                     <!-- Phần 2: Hỗ trợ khách hàng -->
                     <div class="col-md-3 footer-section">
-                        <h4 class="mb-3">Hỗ trợ khách hàng</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Cửa hàng</a></li>
-                            <li><a href="#">Giới thiệu</a></li>
-                            <li><a href="#">Liên hệ</a></li>
-                            <li><a href="#">Câu hỏi thường gặp</a></li>
-                            <li><a href="#">Khuyến mãi Combo</a></li>
-                            <li><a href="#">Khuyến mãi Mua X tặng Y</a></li>
-                        </ul>
+                        <div class="footer-section_click">
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <h4 class="mb-3">Hỗ trợ khách hàng</h4>
+                                <span class="footer-section__icon d-none"
+                                    ><i class="fa-solid fa-angle-down footer-section__icon_"></i
+                                ></span>
+                            </div>
+                            <ul class="footer-links footer-links_click">
+                                <li><a>Cửa hàng</a></li>
+                                <li><a>Giới thiệu</a></li>
+                                <li><a>Liên hệ</a></li>
+                                <li><a>Câu hỏi thường gặp</a></li>
+                                <li><a>Khuyến mãi Combo</a></li>
+                                <li><a>Khuyến mãi Mua X tặng Y</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- Phần 3: Chính sách -->
                     <div class="col-md-3 footer-section">
-                        <h4 class="mb-3">Chính sách</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Chính sách giao hàng</a></li>
-                            <li><a href="#">Điều khoản dịch vụ</a></li>
-                            <li><a href="#">Chính sách bảo mật</a></li>
-                            <li><a href="#">Chính sách đổi trả</a></li>
-                            <li><a href="#">Chương trình cộng tác viên</a></li>
-                        </ul>
+                        <div class="footer-section_click">
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <h4 class="mb-3">Chính sách</h4>
+                                <span class="footer-section__icon d-none"
+                                    ><i class="fa-solid fa-angle-down footer-section__icon_"></i
+                                ></span>
+                            </div>
+                            <ul class="footer-links footer-links_click">
+                                <li><a>Chính sách giao hàng</a></li>
+                                <li><a>Điều khoản dịch vụ</a></li>
+                                <li><a>Chính sách bảo mật</a></li>
+                                <li><a>Chính sách đổi trả</a></li>
+                                <li><a>Chương trình cộng tác viên</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- Phần 4: Đăng ký nhận tin -->
                     <div class="col-md-3 footer-section">
                         <h4 class="mb-3">Đăng ký nhận tin</h4>
                         <p>Bạn muốn nhận khuyến mãi đặc biệt? Đăng ký ngay.</p>
-                        <form class="position-relative">
+                        <form class="position-relative mt-2">
                             <input
                                 type="email"
                                 placeholder="Nhập địa chỉ email"
@@ -2230,7 +2856,8 @@
                 </div>
             </div>
         </footer>
-
+        <!-- Overlay -->
+        <div class="overlay"></div>
         <!-- Ionicons  -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -2256,5 +2883,6 @@
         <script src="./assets/js/global.js"></script>
         <script src="./assets/js/home.js"></script>
         <script src="./assets/js/product.js"></script>
+        <script src="./assets/js/cart-detail.js"></script>
     </body>
 </html>
