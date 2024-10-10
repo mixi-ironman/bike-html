@@ -134,3 +134,16 @@ a {
         transform: translate3d(0, 0%, 0);
     }
 }
+
+/* customer pagination */
+.page-link {
+    border-radius: 50% !important;
+    margin-left: 5px !important;
+    padding: 1px 8px;
+    color: #888;
+}
+
+.page-link:focus {
+    color: black;
+    background-color: rgb(255, 219, 0);
+}
