@@ -100,75 +100,7 @@ function headerScroll() {
 
 headerScroll();
 
-// // toggle nav mobile
-// $(document).ready(function () {
-//     var navBar = $('.nav__mobile');
-//     var overlay = $('.overlay');
-
-//     // Khi bấm vào nút toggle, hiển thị nav bar và overlay
-//     $('.toggle-nav__mobile').on('click', function (e) {
-//         e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
-//         navBar.addClass('show').removeClass('hidden');
-//         overlay.fadeIn(300);
-//     });
-
-//     // Khi bấm vào bất cứ đâu bên ngoài nav bar, ẩn nav bar và overlay
-//     $(document).on('click', function () {
-//         navBar.addClass('hidden').removeClass('show');
-//         overlay.fadeOut(300);
-//     });
-
-//     // Ngăn không ẩn nav bar khi click vào bên trong nó
-//     navBar.on('click', function (e) {
-//         e.stopPropagation();
-//     });
-// });
-
-// toggle nav mobile
-$(document).ready(function () {
-    var navBar = $('.nav__mobile');
-    var overlay = $('.overlay');
-
-    // Khi bấm vào nút toggle, hiển thị nav bar và overlay
-    $('.toggle-nav__mobile').on('click', function (e) {
-        e.stopPropagation();
-
-        // Hiển thị nav bar với animation trượt từ trái
-        navBar.show().animate(
-            {
-                left: '0',
-            },
-            300,
-        );
-
-        overlay.fadeIn(300);
-        $('.header').removeClass('sticky');
-        $('body').css('overflow', 'hidden');
-    });
-
-    // Khi bấm vào bất cứ đâu bên ngoài nav bar, ẩn nav bar và overlay
-    $(document).on('click', function () {
-        navBar.animate(
-            {
-                left: '-300px',
-            },
-            300,
-            function () {
-                navBar.hide(); // Sau khi animation xong thì ẩn hẳn
-            },
-        );
-
-        overlay.fadeOut(300);
-        $('body').css('overflow', 'visible');
-    });
-
-    // Ngăn không ẩn nav bar khi click vào bên trong nó
-    navBar.on('click', function (e) {
-        e.stopPropagation();
-    });
-});
-
-// accordion
+// accordion ------------------------------------
 // $(document).ready(function () {
 //     //toggle footer
 //     $('.footer-section_click').click(function (event) {
@@ -251,3 +183,81 @@ function toggleAccordion(trigger, contentClass, iconClass) {
     // Hiển thị hoặc ẩn danh sách hiện tại
     trigger.find(contentClass).slideToggle();
 }
+
+// // toggle nav mobile
+// $(document).ready(function () {
+//     var navBar = $('.nav__mobile');
+//     var overlay = $('.overlay');
+
+//     // Khi bấm vào nút toggle, hiển thị nav bar và overlay
+//     $('.toggle-nav__mobile').on('click', function (e) {
+//         e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+//         navBar.addClass('show').removeClass('hidden');
+//         overlay.fadeIn(300);
+//     });
+
+//     // Khi bấm vào bất cứ đâu bên ngoài nav bar, ẩn nav bar và overlay
+//     $(document).on('click', function () {
+//         navBar.addClass('hidden').removeClass('show');
+//         overlay.fadeOut(300);
+//     });
+
+//     // Ngăn không ẩn nav bar khi click vào bên trong nó
+//     navBar.on('click', function (e) {
+//         e.stopPropagation();
+//     });
+// });
+
+// toggle nav mobile
+// -------
+function initToggleNav(toggleButtonSelector, navBarSelector, overlaySelector) {
+    var navBar = $(navBarSelector);
+    var overlay = $(overlaySelector);
+
+    // Khi bấm vào nút toggle, hiển thị nav bar và overlay
+    $(toggleButtonSelector).on('click', function (e) {
+        e.stopPropagation();
+
+        // Hiển thị nav bar với animation trượt từ trái
+        navBar.removeClass('d-none');
+        navBar.show().animate(
+            {
+                left: '0',
+            },
+            200,
+        );
+
+        overlay.fadeIn(200);
+        $('.header').removeClass('sticky');
+        $('body').css('overflow', 'hidden');
+    });
+
+    // Khi bấm vào bất cứ đâu bên ngoài nav bar, ẩn nav bar và overlay
+    $(document).on('click', function () {
+        navBar.animate(
+            {
+                left: '-300px',
+            },
+            200,
+            function () {
+                // navBar.hide();
+            },
+        );
+
+        overlay.fadeOut(200);
+        $('body').css('overflow', 'visible');
+    });
+
+    // Ngăn không ẩn nav bar khi click vào bên trong nó
+    navBar.on('click', function (e) {
+        e.stopPropagation();
+    });
+}
+
+$(document).ready(function () {
+    // Gọi hàm với các selector khác nhau
+    // nav header mobile
+    initToggleNav('.toggle-nav__mobile', '.nav__mobile', '.overlay');
+    // nav-filter-mobile
+    initToggleNav('.filter-mobile__icon-wrap', '.product-collection__filter-mobile', '.overlay');
+});

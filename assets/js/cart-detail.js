@@ -21,9 +21,6 @@ $(document).ready(function () {
         if (!$(e.target).closest('.coupon-toggle-btn, .coupon-list-container').length) {
             $('.coupon-list-container').removeClass('show');
             $('.coupon-list-overlay').fadeOut(); // Ẩn overlay
-            // reset lại nút sao chép coupon
-            // $('.copy-btn').text('Sao chép');
-            // $('.copy-btn').css('background-color', 'black');
             setTimeout(function () {
                 $('.coupon-list-container').css('display', 'none'); // Ẩn sau khi hiệu ứng hoàn tất
             }, 300);
