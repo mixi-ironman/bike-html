@@ -83,6 +83,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     function initializeSlick() {
         if ($(window).width() < 768) {
+            $('.btn-load_more').css('display', 'none');
+
             if (!$('.flashsale__list').hasClass('slick-initialized')) {
                 $('.flashsale__list').slick({
                     infinite: true,
