@@ -1279,7 +1279,7 @@ header {
 
     /* coupon */
     .coupon-list {
-        flex-wrap: nowrap;
+        margin: 0;
     }
 
     /* Product */

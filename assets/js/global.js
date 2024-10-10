@@ -101,29 +101,6 @@ function headerScroll() {
 headerScroll();
 
 // accordion ------------------------------------
-// $(document).ready(function () {
-//     //toggle footer
-//     $('.footer-section_click').click(function (event) {
-//         event.preventDefault();
-//         toggleAccordion($(this), '.footer-links_click', '.footer-section__icon');
-//     });
-
-//     // toggle sub nav mobile
-//     $('.nav__mobile-item > a').click(function (event) {
-//         event.preventDefault();
-//         toggleAccordion($(this).parent(), '.nav__mobile-item__sub-menu', '.mobile-nav__icon');
-//     });
-
-//     // toggle tab - product detail
-//     if ($(window).width() < 768) {
-//         alert('ngu');
-//         $('.product-detail__nav-item > .product-detail__tab-link').click(function (event) {
-//             event.preventDefault();
-//             $('.product-detail__content-mobile').removeClass('d-none');
-//             toggleAccordion($(this).parent(), '.product-detail__content-mobile', '.mobile-nav__icon');
-//         });
-//     }
-// });
 
 $(document).ready(function () {
     // toggle footer
@@ -185,28 +162,6 @@ function toggleAccordion(trigger, contentClass, iconClass) {
 }
 
 // // toggle nav mobile
-// $(document).ready(function () {
-//     var navBar = $('.nav__mobile');
-//     var overlay = $('.overlay');
-
-//     // Khi bấm vào nút toggle, hiển thị nav bar và overlay
-//     $('.toggle-nav__mobile').on('click', function (e) {
-//         e.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
-//         navBar.addClass('show').removeClass('hidden');
-//         overlay.fadeIn(300);
-//     });
-
-//     // Khi bấm vào bất cứ đâu bên ngoài nav bar, ẩn nav bar và overlay
-//     $(document).on('click', function () {
-//         navBar.addClass('hidden').removeClass('show');
-//         overlay.fadeOut(300);
-//     });
-
-//     // Ngăn không ẩn nav bar khi click vào bên trong nó
-//     navBar.on('click', function (e) {
-//         e.stopPropagation();
-//     });
-// });
 
 // toggle nav mobile
 // -------
