@@ -39,3 +39,79 @@ $(document).ready(function () {
         language: 'vi',
     });
 });
+
+$(document).ready(function () {
+    $('.similar_products-list').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: false,
+        prevArrow:
+            "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-chevron-left'></i></button>",
+        nextArrow:
+            "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+        ],
+    });
+
+    $('.may-like_products-list').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: false,
+        prevArrow:
+            "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-chevron-left'></i></button>",
+        nextArrow:
+            "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+        ],
+    });
+});

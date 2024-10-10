@@ -622,12 +622,4 @@
 
 /* tablet width >= 768px and with < 1024px */
 @media screen and(min-width: 768px) and (max-width: 1023px) {
-    .product-list .product-item {
-        margin-right: 15px; /* Khoảng cách giữa các item */
-    }
-
-    /* Để item cuối cùng không có margin bên phải */
-    .product-list .product-item:last-child {
-        margin-right: 0;
-    }
 }
