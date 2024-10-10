@@ -177,3 +177,12 @@ function copyCouponCode(elementId, button) {
             });
     }
 }
+
+$('.news-article-sidebar__title').on('click', function () {
+    const icon = $('.cate-icon_news');
+    if (icon.css('transform') === 'none') {
+        icon.css('transform', 'rotate(180deg)');
+    } else {
+        icon.css('transform', 'none');
+    }
+});
