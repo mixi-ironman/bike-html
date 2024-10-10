@@ -10,6 +10,13 @@
     transform: scale(0.96);
 }
 
+.product-collection__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .filter-section {
     /* border: 1px solid red; */
     border-top: 1px dashed rgb(136, 136, 136, 0.2);
@@ -53,4 +60,79 @@
 
 .filter-content-selected__remove:hover {
     color: red;
+}
+
+/* mobile & tablet width< 1024*/
+@media only screen and (min-width: 63.9375rem) {
+}
+
+/* mobile width < 768px*/
+@media only screen and (max-width: 767px) {
+    .product-collection__heading {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .product-collection__sort {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .product-collection__sort-category span,
+    .product-collection__sort-category select,
+    .product-collection__sort-category option {
+        font-size: 14px !important;
+    }
+
+    .product-collection__filter {
+        display: none;
+    }
+
+    .filter-mobile__icon-wrap {
+        display: block !important;
+    }
+
+    .filter-mobile__icon {
+        font-size: 18px !important;
+    }
+
+    /* Cơ bản cho sidebar */
+    .product-collection__filter-mobile {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: left 0.3s ease-in-out;
+        z-index: 9999;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    /* Khi sidebar được mở */
+    .product-collection__filter-mobile.active {
+        /* left: 0;  */
+    }
+
+    /* Nút đóng sidebar */
+    .close-btn_nav-filter {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
+
+/* tablet width >= 768px and with < 1024px */
+@media screen and(min-width: 768px) and (max-width: 1023px) {
 }
