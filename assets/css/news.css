@@ -25,11 +25,7 @@
 }
 
 /* mobile & tablet width< 1024*/
-@media only screen and (min-width: 63.9375rem) {
-}
-
-/* mobile width < 768px*/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 63.9375rem) {
     .news-article__sidebar {
         display: none !important;
     }
@@ -54,6 +50,10 @@
         max-height: 222px;
         overflow: auto;
     }
+}
+
+/* mobile width < 768px*/
+@media only screen and (max-width: 767px) {
 }
 
 /* tablet width >= 768px and with < 1024px */

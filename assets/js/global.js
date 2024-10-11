@@ -101,17 +101,38 @@ function headerScroll() {
 headerScroll();
 
 // accordion ------------------------------------
+// Hàm để hiển thị/ẩn danh sách và xoay icon
+function toggleAccordion(trigger, contentClass, iconClass) {
+    var icon = trigger.find(iconClass);
+
+    // Xóa lớp .rotated khỏi tất cả các icon khác
+    $(iconClass).not(icon).removeClass('rotated');
+
+    // Kiểm tra xem icon hiện tại đã có lớp .rotated chưa
+    if (icon.hasClass('rotated')) {
+        icon.removeClass('rotated'); // Xoay ngược lại
+    } else {
+        icon.addClass('rotated'); // Xoay 180 độ
+    }
+
+    // Ẩn tất cả các nội dung ngoại trừ phần tử liền sau
+    $(contentClass).not(trigger.find(contentClass)).slideUp();
+
+    // Hiển thị hoặc ẩn danh sách hiện tại
+    trigger.find(contentClass).slideToggle();
+}
 
 $(document).ready(function () {
     // toggle footer
     $('.footer-section_click').click(function (event) {
-        event.preventDefault();
+        // event.preventDefault();
         toggleAccordion($(this), '.footer-links_click', '.footer-section__icon');
     });
 
     // toggle sub nav mobile
     $('.nav__mobile-item > a').click(function (event) {
         event.preventDefault();
+        $('.product-detail__content-mobile').removeClass('d-none');
         toggleAccordion($(this).parent(), '.nav__mobile-item__sub-menu', '.mobile-nav__icon');
     });
 
@@ -139,29 +160,6 @@ $(document).ready(function () {
         handleProductDetailTabClick();
     });
 });
-
-// Hàm để hiển thị/ẩn danh sách và xoay icon
-function toggleAccordion(trigger, contentClass, iconClass) {
-    var icon = trigger.find(iconClass);
-
-    // Xóa lớp .rotated khỏi tất cả các icon khác
-    $(iconClass).not(icon).removeClass('rotated');
-
-    // Kiểm tra xem icon hiện tại đã có lớp .rotated chưa
-    if (icon.hasClass('rotated')) {
-        icon.removeClass('rotated'); // Xoay ngược lại
-    } else {
-        icon.addClass('rotated'); // Xoay 180 độ
-    }
-
-    // Ẩn tất cả các nội dung ngoại trừ phần tử liền sau
-    $(contentClass).not(trigger.find(contentClass)).slideUp();
-
-    // Hiển thị hoặc ẩn danh sách hiện tại
-    trigger.find(contentClass).slideToggle();
-}
-
-// // toggle nav mobile
 
 // toggle nav mobile
 // -------
