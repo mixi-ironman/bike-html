@@ -72,6 +72,12 @@
     transform: translateY(0);
 }
 
+.cart-summary__title,
+.cart-summary__delivery-wrap,
+.coupon-toggle {
+    display: none !important;
+}
+
 /* mobile & tablet width< 1024*/
 @media only screen and (min-width: 63.9375rem) {
 }
@@ -126,5 +132,5 @@
 }
 
 /* tablet width >= 768px and with < 1024px */
-@media screen and(min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 }

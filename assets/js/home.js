@@ -18,11 +18,15 @@ $(document).ready(function () {
         slidesToScroll: 2,
         arrows: false,
         dots: false,
+        prevArrow:
+            "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-chevron-left'></i></button>",
+        nextArrow:
+            "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true,
@@ -51,14 +55,19 @@ $(document).ready(function () {
         slidesToScroll: 2,
         arrows: false,
         dots: false,
+        prevArrow:
+            "<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-chevron-left'></i></button>",
+        nextArrow:
+            "<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: 3,
                     slidesToScroll: 2,
                     infinite: true,
-                    dots: true,
+                    dots: false,
+                    arrows: true,
                 },
             },
             {
@@ -113,7 +122,18 @@ $(document).ready(function () {
                         $('.blog-list .slick-slide').css('margin-right', '15px');
                     });
             }
-        } else {
+        } // Đối với màn hình máy tính bảng (768px đến 1024px)
+        else if ($(window).width() >= 768 && $(window).width() <= 1024) {
+            if (!$('.flashsale__list').hasClass('slick-initialized')) {
+                $('.flashsale__list').slick({
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    arrows: false,
+                });
+            }
+        } // Khi lớn hơn 1024px thì xóa slick để hiển thị bình thường
+        else {
             if (
                 $('.flashsale__list').hasClass('slick-initialized') ||
                 $('.blog-list').hasClass('slick-initialized') ||
@@ -135,6 +155,7 @@ $(document).ready(function () {
     });
 });
 
+// hiển thị modal search
 function setupSearchWithOverlay(inputId, resultsClass, overlayClass) {
     const searchInput = document.getElementById(inputId);
     const searchResults = document.querySelector(resultsClass);

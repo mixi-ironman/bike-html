@@ -63,30 +63,8 @@
 }
 
 /* mobile & tablet width< 1024*/
-@media only screen and (min-width: 63.9375rem) {
-}
-
-/* mobile width < 768px*/
-@media only screen and (max-width: 767px) {
-    .product-collection__heading {
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .product-collection__sort {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .product-collection__sort-category span,
-    .product-collection__sort-category select,
-    .product-collection__sort-category option {
-        font-size: 14px !important;
-    }
-
+@media only screen and (max-width: 63.9375rem) {
+    /* filte */
     .product-collection__filter {
         display: none;
     }
@@ -95,11 +73,22 @@
         display: block !important;
     }
 
+    .product-collection__sort-category {
+        margin-right: 10px;
+    }
+
+    .product-collection__sort {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-top: 10px;
+    }
+
     .filter-mobile__icon {
         font-size: 18px !important;
     }
 
-    /* Cơ bản cho sidebar */
     .product-collection__filter-mobile {
         display: none;
         position: fixed;
@@ -115,9 +104,10 @@
         overflow-y: auto;
     }
 
-    /* Khi sidebar được mở */
-    .product-collection__filter-mobile.active {
-        /* left: 0;  */
+    .product-collection__sort-category span,
+    .product-collection__sort-category select,
+    .product-collection__sort-category option {
+        font-size: 14px !important;
     }
 
     /* Nút đóng sidebar */
@@ -133,6 +123,36 @@
     }
 }
 
+/* mobile width < 768px*/
+@media only screen and (max-width: 767px) {
+    /* filte */
+    .product-collection__heading {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .product-collection__sort {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    /* Khi sidebar được mở */
+    .product-collection__filter-mobile.active {
+        /* left: 0;  */
+    }
+}
+
 /* tablet width >= 768px and with < 1024px */
-@media screen and(min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .product-collection__heading {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .product-collection__heading h4 {
+        width: 100%;
+    }
 }
