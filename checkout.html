@@ -19,67 +19,8 @@
             referrerpolicy="no-referrer"
         />
         <title>Checkout - EGA Bike</title>
-        <style>
-            ::-webkit-scrollbar {
-                width: 10px;
-                height: 10px;
-            }
-
-            /* Thanh cuộn */
-            ::-webkit-scrollbar-thumb {
-                background-color: rgb(136, 136, 136);
-                border-radius: 10px;
-                border: 2px solid #f1f1f1;
-            }
-
-            ::-webkit-scrollbar-thumb:hover {
-                background: #555;
-            }
-            .form-group {
-                margin-bottom: 15px;
-            }
-
-            .form-control {
-                padding: 10px !important;
-                box-sizing: border-box;
-            }
-
-            .payment-method {
-                position: relative;
-                display: flex;
-                align-items: center;
-            }
-
-            .icon-money {
-                position: absolute;
-                right: 10%;
-                color: #1990c6;
-            }
-
-            /* mobile & tablet width< 1024*/
-            @media only screen and (min-width: 63.9375rem) {
-            }
-
-            /* mobile width < 768px*/
-            @media only screen and (max-width: 767px) {
-                .main-content__title-icon {
-                    display: inline-block !important;
-                }
-
-                .checkout-action_wrap {
-                    flex-direction: column-reverse;
-                }
-
-                .checkout-action_btn {
-                    margin-bottom: 15px;
-                    width: 100% !important;
-                }
-            }
-
-            /* tablet width >= 768px and with < 1024px */
-            @media screen and(min-width: 768px) and (max-width: 1023px) {
-            }
-        </style>
+        <!-- External link css -->
+        <link rel="stylesheet" href="./assets/css/checkout.css" />
     </head>
     <body>
         <div class="container">
@@ -592,7 +533,9 @@
                         </div>
 
                         <div class="checkout-action_wrap d-flex justify-content-between align-items-center mt-2">
-                            <a href="#" style="text-decoration: none; font-size: 14px; font-weight: 400"
+                            <a
+                                href="./cart-detail.html"
+                                style="text-decoration: none; font-size: 14px; font-weight: 400"
                                 ><span calss="d-inline-block"
                                     ><i
                                         class="fa-solid fa-chevron-left me-1"

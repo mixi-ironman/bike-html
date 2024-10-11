@@ -1,4 +1,4 @@
-// slick cẩousel
+// slick carrousel
 $(document).ready(function () {
     $('.slider-list').slick({
         dots: true,
