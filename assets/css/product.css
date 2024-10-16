@@ -185,7 +185,7 @@
 }
 
 .product-options__size-item.active {
-    border: 1px solid red;
+    border: 2px solid red;
 }
 
 .product-options__color-img {
