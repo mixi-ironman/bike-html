@@ -167,3 +167,15 @@ $(document).ready(function () {
         ],
     });
 });
+
+$(document).ready(function () {
+    function changeImage(targetElement, event, mainImageClass) {
+        event.preventDefault();
+        var url = $(targetElement).data('img');
+        $(mainImageClass).attr('src', url);
+    }
+
+    $(document).on('click', '.product-detail_img-thumbnail', function (event) {
+        changeImage(this, event, '.mainImage');
+    });
+});

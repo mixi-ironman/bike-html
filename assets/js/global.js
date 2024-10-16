@@ -82,12 +82,12 @@ $(document).ready(function () {
     });
 });
 
-// scroll header
 function headerScroll() {
-    window.addEventListener('scroll', function () {
-        var stickyElement = document.querySelector('.header');
-        var contentOffsetTop = document.querySelector('.main-content').offsetTop;
-        // var contentOffsetTop = document.querySelector('.main-content').getBoundingClientRect().top;
+    var stickyElement = document.querySelector('.header');
+    var contentOffsetTop = document.querySelector('.main-content').offsetTop;
+
+    // Hàm kiểm tra vị trí cuộn và thêm/xóa class 'sticky'
+    function handleScroll() {
         var scrollPosition = window.scrollY;
 
         if (scrollPosition >= contentOffsetTop) {
@@ -95,9 +95,13 @@ function headerScroll() {
         } else {
             stickyElement.classList.remove('sticky');
         }
-    });
+    }
+
+    // Thêm sự kiện scroll vào window
+    window.addEventListener('scroll', handleScroll);
 }
 
+// Gọi hàm
 headerScroll();
 
 // accordion ------------------------------------
@@ -213,4 +217,32 @@ $(document).ready(function () {
     initToggleNav('.toggle-nav__mobile', '.nav__mobile', '.overlay');
     // nav-filter-mobile
     initToggleNav('.filter-mobile__icon-wrap', '.product-collection__filter-mobile', '.overlay');
+});
+
+$(document).ready(function () {
+    function activeOption(itemSelector, activeClass) {
+        $(document).on('click', itemSelector, function () {
+            // Bỏ class active của tất cả các item
+            $(itemSelector).removeClass(activeClass);
+
+            // Thêm class active vào item được click
+            $(this).addClass(activeClass);
+        });
+    }
+
+    activeOption('.product-options__size-item', 'active'); // Kích hoạt chọn size
+    activeOption('.product-options__color-img', 'active'); // Kích hoạt chọn màu
+});
+
+$(document).ready(function () {
+    function activateOption(itemSelector, activeClass) {
+        $(document).on('click', itemSelector, function () {
+            var $currentItem = $(this);
+
+            $currentItem.parent().find(itemSelector).removeClass(activeClass);
+            $currentItem.addClass(activeClass);
+        });
+    }
+
+    activateOption('.product-info__item-color-img', 'active'); // Kích hoạt chọn màu
 });

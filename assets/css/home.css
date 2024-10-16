@@ -400,6 +400,7 @@ header {
     background-color: rgb(171, 148, 152); */
 }
 
+/* custom slick */
 .slick-arrow {
     display: flex;
     align-items: center;
@@ -825,7 +826,7 @@ header {
     margin-right: 3px;
 }
 
-.product-info__item-color-img:hover {
+.product-info__item-color-img.active {
     border: 2px solid rgb(87, 243, 48);
     border-radius: 5px;
 }
