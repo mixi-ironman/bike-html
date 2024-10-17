@@ -14,22 +14,19 @@
 
 .product-detail_wrap-thumbnail {
     /* padding: 10px 0; */
-    width: 85px;
+    width: 100px !important;
 }
 
 .product-detail_img-thumbnail {
-    margin: auto;
+    /* margin: auto;
     display: block;
     min-width: 100%;
     max-width: 100%;
-    object-fit: cover;
+    object-fit: cover; */
 }
 
-.product-detail_img-thumbnail:hover {
-    border: 1px solid rgb(220, 232, 99);
-}
-
-.product-detail_wrap-img_main {
+.product-detail_img-thumbnail.active {
+    border: 2px solid #888;
 }
 
 .share-group {
