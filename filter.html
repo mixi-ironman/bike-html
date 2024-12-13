@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="filter-container">
+        <form id="filterForm" method="GET" action="{{ route('products.index') }}">
+          <!-- Lọc theo danh mục -->
+          <div class="filter-category">
+            <label for="category">Danh mục:</label>
+            <select name="category" id="category">
+              <option value="">Tất cả</option>
+              @foreach($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+              @endforeach
+            </select>
+          </div>
+      
+          <!-- Lọc theo khoảng giá -->
+          <div class="filter-price">
+            <label for="min_price">Giá từ:</label>
+            <input type="number" name="min_price" id="min_price" placeholder="Min">
+            
+            <label for="max_price">đến:</label>
+            <input type="number" name="max_price" id="max_price" placeholder="Max">
+          </div>
+      
+          <!-- Button Lọc -->
+          <button type="submit" class="btn btn-primary">Lọc</button>
+        </form>
+      </div>
+      
+</body>
+</html>

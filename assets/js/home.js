@@ -122,7 +122,8 @@ $(document).ready(function () {
                         $('.blog-list .slick-slide').css('margin-right', '15px');
                     });
             }
-        } // Đối với màn hình máy tính bảng (768px đến 1024px)
+        } 
+        // Đối với màn hình máy tính bảng (768px đến 1024px)
         else if ($(window).width() >= 768 && $(window).width() <= 1024) {
             if (!$('.flashsale__list').hasClass('slick-initialized')) {
                 $('.flashsale__list').slick({
@@ -132,7 +133,8 @@ $(document).ready(function () {
                     arrows: false,
                 });
             }
-        } // Khi lớn hơn 1024px thì xóa slick để hiển thị bình thường
+        } 
+        // Khi lớn hơn 1024px thì xóa slick để hiển thị bình thường
         else {
             if (
                 $('.flashsale__list').hasClass('slick-initialized') ||

@@ -684,14 +684,15 @@
                                     </div>
                                     <p class="register-page__title mb-4 text-center">Đăng ký tài khoản</p>
                                     <form class="register-page__form" id="register-form">
+                                        <!-- Họ và Tên -->
                                         <div class="form-group register-page__form-group">
-                                            <label for="name" class="register-page__label"
-                                                >Họ và Tên<span
+                                            <label for="name" class="register-page__label">
+                                                Họ và Tên<span
                                                     class="d-inline-block custom-cursor-default-hover"
                                                     style="color: red; margin-bottom: 7px"
                                                     >*</span
-                                                ></label
-                                            >
+                                                >
+                                            </label>
                                             <input
                                                 type="text"
                                                 class="form-control register-page__input"
@@ -701,14 +702,16 @@
                                             />
                                             <span id="name-error" class="error-message text-danger"></span>
                                         </div>
+
+                                        <!-- Số điện thoại -->
                                         <div class="form-group register-page__form-group">
-                                            <label for="phone" class="register-page__label"
-                                                >Số điện thoại<span
+                                            <label for="phone" class="register-page__label">
+                                                Số điện thoại<span
                                                     class="d-inline-block custom-cursor-default-hover"
                                                     style="color: red; margin-bottom: 7px"
                                                     >*</span
-                                                ></label
-                                            >
+                                                >
+                                            </label>
                                             <input
                                                 type="text"
                                                 class="form-control register-page__input"
@@ -719,30 +722,34 @@
                                             <span id="phone-error" class="error-message text-danger"></span>
                                         </div>
 
+                                        <!-- Email -->
                                         <div class="form-group register-page__form-group">
-                                            <label for="phone" class="register-page__label"
-                                                >Email<span
+                                            <label for="email" class="register-page__label">
+                                                Email<span
                                                     class="d-inline-block custom-cursor-default-hover"
                                                     style="color: red; margin-bottom: 7px"
                                                     >*</span
-                                                ></label
-                                            >
+                                                >
+                                            </label>
                                             <input
                                                 type="text"
-                                                class="form-control login-page__input"
+                                                class="form-control register-page__input"
                                                 id="email"
+                                                name="email"
                                                 placeholder="Email"
                                             />
                                             <span id="email-error" class="error-message text-danger"></span>
                                         </div>
+
+                                        <!-- Mật khẩu -->
                                         <div class="form-group register-page__form-group">
-                                            <label for="password" class="register-page__label"
-                                                >Mật khẩu<span
+                                            <label for="password" class="register-page__label">
+                                                Mật khẩu<span
                                                     class="d-inline-block custom-cursor-default-hover"
                                                     style="color: red; margin-bottom: 7px"
                                                     >*</span
-                                                ></label
-                                            >
+                                                >
+                                            </label>
                                             <input
                                                 type="password"
                                                 class="form-control register-page__input"
@@ -753,6 +760,70 @@
                                             <span id="password-error" class="error-message text-danger"></span>
                                         </div>
 
+                                        <!-- Thành phố -->
+                                        <div class="form-group register-page__form-group">
+                                            <label for="city" class="register-page__label"
+                                                >Thành phố<span style="color: red">*</span></label
+                                            >
+                                            <select
+                                                class="form-control select2 register-page__input"
+                                                id="city"
+                                                name="city"
+                                                placeholder="Chọn thành phố"
+                                            >
+                                                <!-- Options sẽ được load từ server -->
+                                            </select>
+                                            <span id="city-error" class="error-message text-danger"></span>
+                                        </div>
+
+                                        <!-- Huyện -->
+                                        <div class="form-group register-page__form-group">
+                                            <label for="district" class="register-page__label"
+                                                >Huyện<span style="color: red">*</span></label
+                                            >
+                                            <select
+                                                class="form-control select2 register-page__input"
+                                                id="district"
+                                                name="district"
+                                                placeholder="Chọn huyện"
+                                            >
+                                                <!-- Options sẽ được load từ server -->
+                                            </select>
+                                            <span id="district-error" class="error-message text-danger"></span>
+                                        </div>
+
+                                        <!-- Phường -->
+                                        <div class="form-group register-page__form-group">
+                                            <label for="ward" class="register-page__label"
+                                                >Phường<span style="color: red">*</span></label
+                                            >
+                                            <select
+                                                class="form-control select2 register-page__input"
+                                                id="ward"
+                                                name="ward"
+                                                placeholder="Chọn phường"
+                                            >
+                                                <!-- Options sẽ được load từ server -->
+                                            </select>
+                                            <span id="ward-error" class="error-message text-danger"></span>
+                                        </div>
+
+                                        <!-- Địa chỉ cụ thể -->
+                                        <div class="form-group register-page__form-group">
+                                            <label for="address" class="register-page__label"
+                                                >Địa chỉ cụ thể<span style="color: red">*</span></label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="form-control register-page__input"
+                                                id="address"
+                                                name="address"
+                                                placeholder="Nhập địa chỉ cụ thể"
+                                            />
+                                            <span id="address-error" class="error-message text-danger"></span>
+                                        </div>
+
+                                        <!-- Đăng ký button -->
                                         <button
                                             type="submit"
                                             class="btn btn-danger btn-block register-page__submit-btn"
@@ -760,6 +831,7 @@
                                             Đăng ký
                                         </button>
                                     </form>
+
                                     <div
                                         class="login-social d-flex w-100% bg-white align-items-center justify-content-center"
                                     >
@@ -903,5 +975,13 @@
         <!-- JavaScript để thay đổi hình ảnh lớn khi click vào product-info__thumbnail -->
         <script src="./assets/js/global.js"></script>
         <script src="./assets/js/home.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.select2').select2({
+                    placeholder: 'Chọn...',
+                    allowClear: true,
+                });
+            });
+        </script>
     </body>
 </html>

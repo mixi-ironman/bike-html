@@ -67,6 +67,21 @@
     /* filte */
     .product-collection__filter {
         display: none;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: left 0.3s ease-in-out;
+        z-index: 9999;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .product-filter_nav-mobile__heading {
+        display: block !important;
     }
 
     .filter-mobile__icon-wrap {
@@ -89,7 +104,7 @@
         font-size: 18px !important;
     }
 
-    .product-collection__filter-mobile {
+    /* .product-collection__filter-mobile {
         display: none;
         position: fixed;
         top: 0;
@@ -102,7 +117,7 @@
         z-index: 9999;
         padding: 20px;
         overflow-y: auto;
-    }
+    } */
 
     .product-collection__sort-category span,
     .product-collection__sort-category select,

@@ -216,22 +216,36 @@ $(document).ready(function () {
     // nav header mobile
     initToggleNav('.toggle-nav__mobile', '.nav__mobile', '.overlay');
     // nav-filter-mobile
-    initToggleNav('.filter-mobile__icon-wrap', '.product-collection__filter-mobile', '.overlay');
+    initToggleNav('.filter-mobile__icon-wrap', '.product-collection__filter', '.overlay');
+    // initToggleNav('.filter-mobile__icon-wrap', '.product-collection__filter-mobile', '.overlay');
 });
 
+// $(document).ready(function () {
+//     function activeOption(itemSelector, activeClass) {
+//         $(document).on('click', itemSelector, function () {
+//             // Bỏ class active của tất cả các item
+//             $(itemSelector).removeClass(activeClass);
+
+//             // Thêm class active vào item được click
+//             $(this).addClass(activeClass);
+//         });
+//     }
+
+//     activeOption('.product-options__size-item', 'active'); // Kích hoạt chọn size
+//     activeOption('.product-options__color-img', 'active'); // Kích hoạt chọn màu
+// });
 $(document).ready(function () {
     function activeOption(itemSelector, activeClass) {
         $(document).on('click', itemSelector, function () {
-            // Bỏ class active của tất cả các item
-            $(itemSelector).removeClass(activeClass);
+            // Bỏ class active của tất cả các item trong cùng một nhóm (option)
+            $(this).closest('.product-options__wrap').find(itemSelector).removeClass(activeClass);
 
             // Thêm class active vào item được click
             $(this).addClass(activeClass);
         });
     }
 
-    activeOption('.product-options__size-item', 'active'); // Kích hoạt chọn size
-    activeOption('.product-options__color-img', 'active'); // Kích hoạt chọn màu
+    activeOption('.product-options__item-btn', 'active'); // Kích hoạt chọn màu và kích thước
 });
 
 $(document).ready(function () {
@@ -246,3 +260,69 @@ $(document).ready(function () {
 
     activateOption('.product-info__item-color-img', 'active'); // Kích hoạt chọn màu
 });
+
+// $(document).ready(function () {
+//     var colorItems = $('.product-info__item-color-img');
+//     var viewMoreButton = $('<a>+1</a>').addClass('view-more-link'); // Đảm bảo sử dụng đúng biến này
+
+//     // Ẩn tất cả các phần tử sau phần tử thứ 3
+//     colorItems.each(function (index) {
+//         if (index >= 2) {
+//             // Ẩn từ phần tử thứ 3 trở đi (index >= 2)
+//             $(this).hide();
+//         }
+//     });
+
+//     // Chỉ thêm nút "Xem thêm" nếu có hơn 2 phần tử
+//     if (colorItems.length > 2) {
+//         colorItems.eq(2).after(viewMoreButton); // Đảm bảo thêm nút sau phần tử thứ 3
+//     }
+// });
+
+$(document).ready(function () {
+    // Lặp qua từng sản phẩm
+    $('.product-item').each(function () {
+        var colorItems = $(this).find('.product-info__item-color-img'); // Lấy các phần tử màu sắc trong sản phẩm hiện tại
+        var viewMoreButton = $(this).find('.view-more-link');
+
+        // Ẩn tất cả các phần tử sau phần tử thứ 3 (index >= 2)
+        colorItems.each(function (index) {
+            if (index >= 2) {
+                $(this).addClass('d-none');
+            }
+        });
+
+        // Chỉ thêm nút "Xem thêm" nếu có hơn 2 phần tử
+        if (colorItems.length > 2 && viewMoreButton.length > 0) {
+            // Nếu nút "Xem thêm" chưa có, chúng ta cần phải thêm vào sau phần tử thứ 3
+            if (viewMoreButton.hasClass('d-none')) {
+                viewMoreButton.removeClass('d-none').addClass('d-block');
+            }
+
+            // // Đảm bảo rằng nút "Xem thêm" sẽ được hiển thị sau phần tử thứ 3
+            // colorItems.eq(2).after(viewMoreButton);
+        }
+    });
+});
+
+// xét chiều cao cho các item bằng nhau
+function setEqualHeightForItems() {
+    let productItems = document.querySelectorAll('.product-item');
+    let maxHeight = 0;
+
+    // Tìm chiều cao lớn nhất của các item
+    productItems.forEach(function (item) {
+        let itemHeight = item.offsetHeight;
+        if (itemHeight > maxHeight) {
+            maxHeight = itemHeight;
+        }
+    });
+
+    // Đặt chiều cao của tất cả các item theo chiều cao lớn nhất
+    productItems.forEach(function (item) {
+        item.style.height = maxHeight + 'px';
+    });
+}
+
+// Gọi hàm khi trang được tải
+window.onload = setEqualHeightForItems;

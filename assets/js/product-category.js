@@ -1,20 +1,23 @@
-function toggleColors() {
-    $('.filter-checkbox .form-check[data-visible="false"]').each(function () {
-        // Lặp qua các phần tử và thay đổi hiển thị của chúng
+function toggleColors(button) {
+    const filterSection = $(button).closest('.filter-section'); // Lấy đúng nhóm bộ lọc
+
+    // Chỉ toggle các phần tử có data-visible="false" trong nhóm bộ lọc hiện tại
+    filterSection.find('.filter-checkbox .form-check[data-visible="false"]').each(function () {
         $(this).toggle();
     });
 
     // Đổi tên nút và thêm icon với style
-    const button = $('#toggleColors');
-    if (button.text().trim() === 'Xem thêm') {
-        button.html('Thu gọn <i class="fa-solid fa-chevron-up" style="font-size: 13px; margin-left: 2px;"></i>');
+    if ($(button).text().trim() === 'Xem thêm') {
+        $(button).html('Thu gọn <i class="fa-solid fa-chevron-up" style="font-size: 13px; margin-left: 2px;"></i>');
     } else {
-        button.html('Xem thêm <i class="fa-solid fa-chevron-down" style="font-size: 13px; margin-left: 2px;"></i>');
+        $(button).html('Xem thêm <i class="fa-solid fa-chevron-down" style="font-size: 13px; margin-left: 2px;"></i>');
     }
 }
 
 $(document).ready(function () {
-    $('.toggleColors').on('click', toggleColors);
+    $('.toggleColors').on('click', function () {
+        toggleColors(this);
+    });
 });
 
 $(document).ready(function () {

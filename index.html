@@ -91,7 +91,7 @@
                                 </div>
                             </li>
 
-                            <li class="menu-item menu-item-fluid">
+                            <li class="menu-item-fluid">
                                 <a href="/phu-tung" class="menu-item__link" title="Phụ tùng xe đạp">
                                     <span>Phụ tùng xe đạp</span>
 
@@ -459,7 +459,10 @@
         <div id="resultBox" class="container-fluid hidden">
             <div class="container">
                 <div class="row">
-                    <div id="header__logo" class="header__logo header__logo_ col-sm-5 col-md-5 align-items-center">
+                    <div
+                        id="header__logo"
+                        class="header__logo header__logo_ col-sm-5 col-md-5 col-xl-3 align-items-center"
+                    >
                         <a href="" class="header__logo-wrapper">
                             <img
                                 class="header__logo-img"
@@ -471,7 +474,7 @@
                         </a>
                     </div>
                     <div
-                        class="header_search-box header_search-box_ col-md-7 position-relative d-flex flex-column justify-content-center"
+                        class="header_search-box header_search-box_ col-md-7 col-xl-7 position-relative d-flex flex-column justify-content-center"
                     >
                         <form
                             class="w-100 header_search-box-input_ d-flex justify-content-center align-items-center position-relative"
@@ -607,7 +610,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="header-right header-right_ col-md-3">
+                    <div class="header-right header-right_ col-md-3 col-xl-2">
                         <div class="header-right__icons justify-content-center">
                             <div class="header-right__acount me-2">
                                 <img
@@ -719,6 +722,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Slider -->
         <div class="slider-wrap container-fluid">
             <!-- Slider items -->
@@ -1096,6 +1100,11 @@
                                             alt=""
                                             class="product-info__item-color-img"
                                         />
+                                        <a
+                                            class="view-more-link d-none"
+                                            href="{{ route('mixibike.product.detail', $item->slug) }}"
+                                            ><i class="fa-solid fa-caret-down" style="font-size: 20px"></i
+                                        ></a>
                                     </div>
                                 </div>
                                 <div class="product-item__sold-info">
@@ -1179,6 +1188,11 @@
                                             alt=""
                                             class="product-info__item-color-img"
                                         />
+                                        <a
+                                            class="view-more-link d-none"
+                                            href="{{ route('mixibike.product.detail', $item->slug) }}"
+                                            ><i class="fa-solid fa-caret-down" style="font-size: 20px"></i
+                                        ></a>
                                     </div>
                                 </div>
                                 <div class="product-item__sold-info">
@@ -1262,6 +1276,11 @@
                                             alt=""
                                             class="product-info__item-color-img"
                                         />
+                                        <a
+                                            class="view-more-link d-none"
+                                            href="{{ route('mixibike.product.detail', $item->slug) }}"
+                                            ><i class="fa-solid fa-caret-down" style="font-size: 20px"></i
+                                        ></a>
                                     </div>
                                 </div>
                                 <div class="product-item__sold-info">
@@ -1371,55 +1390,12 @@
 
             <!-- Bộ sưu tập ảnh -->
             <div class="collection-gallery row g-2">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 collection-gallery-pc">
                     <div class="collection-gallery__item">
                         <img
                             src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_1_img.jpg?1726653723228"
                             alt=""
                             class="collection-item__img"
-                        />
-                        <img
-                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_1_mb_img.jpg?1726653723228"
-                            alt=""
-                            class="collection-item__img-mobile d-none"
-                        />
-                    </div>
-                </div>
-                <div class="col-12 collection-gallery-mobile d-none">
-                    <img
-                        src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_2_mb_img.jpg?1726653723228"
-                        alt=""
-                        class="collection-item__img-mobile d-none"
-                    />
-                </div>
-                <div class="col-12 collection-gallery-mobile d-none">
-                    <div class="collection-gallery__item">
-                        <img
-                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_3_img.jpg?1726653723228"
-                            alt=""
-                            class="collection-item__img"
-                        />
-
-                        <img
-                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_3_mb_img.jpg?1726653723228"
-                            alt=""
-                            class="collection-item__img-mobile d-none"
-                        />
-                    </div>
-                </div>
-
-                <div class="col-12 collection-gallery-mobile d-none">
-                    <div class="collection-gallery__item">
-                        <img
-                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_4_img.jpg?1726653723228"
-                            alt=""
-                            class="collection-item__img"
-                        />
-
-                        <img
-                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_4_mb_img.jpg?1726653723228"
-                            alt=""
-                            class="collection-item__img-mobile d-none"
                         />
                     </div>
                 </div>
@@ -1474,6 +1450,38 @@
                                 />
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-12 collection-gallery-mobile d-none">
+                    <img
+                        src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_1_mb_img.jpg?1726653723228"
+                        alt=""
+                        class="collection-item__img-mobile d-none"
+                    />
+                </div>
+                <div class="col-12 collection-gallery-mobile d-none">
+                    <img
+                        src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_2_mb_img.jpg?1726653723228"
+                        alt=""
+                        class="collection-item__img-mobile d-none"
+                    />
+                </div>
+                <div class="col-12 collection-gallery-mobile d-none">
+                    <div class="collection-gallery__item">
+                        <img
+                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_3_mb_img.jpg?1726653723228"
+                            alt=""
+                            class="collection-item__img-mobile d-none"
+                        />
+                    </div>
+                </div>
+                <div class="col-12 collection-gallery-mobile d-none">
+                    <div class="collection-gallery__item">
+                        <img
+                            src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/bento_grid_item_4_mb_img.jpg?1726653723228"
+                            alt=""
+                            class="collection-item__img-mobile d-none"
+                        />
                     </div>
                 </div>
             </div>
@@ -2638,7 +2646,7 @@
             <div class="container">
                 <div class="row">
                     <!-- Phần 1: Thông tin cửa hàng -->
-                    <div class="col-md-3 footer-section">
+                    <div class="col-12 col-md-12 col-xl-3 footer-section">
                         <img
                             src="https://bizweb.dktcdn.net/100/521/820/themes/957130/assets/logo-footer.png?1726653723228"
                             alt=""
@@ -2657,7 +2665,7 @@
                     </div>
 
                     <!-- Phần 2: Hỗ trợ khách hàng -->
-                    <div class="col-md-3 footer-section">
+                    <div class="col-12 col-md-12 col-xl-3 footer-section">
                         <div class="footer-section_click">
                             <div class="d-flex justify-content-between align-items-center w-100">
                                 <h4 class="mb-3">Hỗ trợ khách hàng</h4>
@@ -2677,7 +2685,7 @@
                     </div>
 
                     <!-- Phần 3: Chính sách -->
-                    <div class="col-md-3 footer-section">
+                    <div class="col-12 col-md-12 col-xl-3 footer-section">
                         <div class="footer-section_click">
                             <div class="d-flex justify-content-between align-items-center w-100">
                                 <h4 class="mb-3">Chính sách</h4>
@@ -2696,7 +2704,7 @@
                     </div>
 
                     <!-- Phần 4: Đăng ký nhận tin -->
-                    <div class="col-md-3 footer-section">
+                    <div class="col-12 col-md-12 col-xl-3 footer-section">
                         <h4 class="mb-3">Đăng ký nhận tin</h4>
                         <p>Bạn muốn nhận khuyến mãi đặc biệt? Đăng ký ngay.</p>
                         <form class="position-relative mt-2">

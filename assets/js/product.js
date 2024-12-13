@@ -170,7 +170,7 @@ $(document).ready(function () {
 
     // Khởi tạo slider cho thumbnail
     $('.product-detail_wrap-thumbnail').slick({
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
